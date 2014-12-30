@@ -199,30 +199,30 @@ $(document).ready(function () {
   	});
 
 
-	google.load("gdata", "1");
-	google.setOnLoadCallback(getMyFeed);
+	// google.load("gdata", "1");
+	// google.setOnLoadCallback(getMyFeed);
 
-  	var myService;
-	var feedUrl = "https://www.google.com/calendar/feeds/neha@magadesign.com/public/full";
+ //  	var myService;
+	// var feedUrl = "https://www.google.com/calendar/feeds/neha@magadesign.com/public/full";
 
-	function setupMyService() {
-	  myService = new google.gdata.calendar.CalendarService('exampleCo-exampleApp-1');
-	}
+	// function setupMyService() {
+	//   myService = new google.gdata.calendar.CalendarService('exampleCo-exampleApp-1');
+	// }
 
-	function getMyFeed() {
-	  setupMyService();
+	// function getMyFeed() {
+	//   setupMyService();
 
-	  myService.getEventsFeed(feedUrl, handleMyFeed, handleError);
-	}
+	//   myService.getEventsFeed(feedUrl, handleMyFeed, handleError);
+	// }
 
-	function handleMyFeed(myResultsFeedRoot) {
-	  alert("This feed's title is: " + myResultsFeedRoot.feed.getTitle().getText());
-	}
+	// function handleMyFeed(myResultsFeedRoot) {
+	//   alert("This feed's title is: " + myResultsFeedRoot.feed.getTitle().getText());
+	// }
 
-	function handleError(e) {
-	  alert("There was an error!");
-	  alert(e.cause ? e.cause.statusText : e.message);
-	}
+	// function handleError(e) {
+	//   alert("There was an error!");
+	//   alert(e.cause ? e.cause.statusText : e.message);
+	// }
 
 
 });	
