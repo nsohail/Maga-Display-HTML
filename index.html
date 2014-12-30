@@ -118,7 +118,8 @@ $(document).ready(function () {
 
 	var currentDate = new Date();
 
-	function formatTime(date){
+	function formatTime(){
+		var date = new Date();
 		var hours = date.getHours();
 		//console.log("this is the hour time" + hours);
 		var minutes = date.getMinutes();
@@ -131,11 +132,16 @@ $(document).ready(function () {
 		var displayTime = hours + ':' + minutes + ' ' + ampm;
 		console.log(displayTime);
 		$('.row1').find($('.current-time')).text(displayTime);
+
+		window.setTimeout (function(){
+			formatTime();
+		}, 10*1000);
 	}
 
-	var getTime = formatTime(currentDate);
+	formatTime();
 
-	function formatDate(date){
+	function formatDate(){
+		var date = new Date();
 		var weekday = new Array();
 		weekday[0]=  "Sunday";
 		weekday[1] = "Monday";
@@ -165,9 +171,13 @@ $(document).ready(function () {
 
 		var displayWholeDate = (displayDay + ', ' + displayMonth + ' ' + displayDate);
 		$('.row1').find($('.current-day')).text(displayWholeDate);
+
+		window.setTimeout(function(){
+			formatDate();
+		}, 10*1000);
 	}
 
-	var getDate = formatDate(currentDate);
+	formatDate();
 
 
 
@@ -180,17 +190,12 @@ $(document).ready(function () {
 	    success: function(weather) {
 		    console.log(weather);
 		    var html = weather.temp+'&deg;'+weather.units.temp;
-		    //html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-		    //html += '<li class="currently">'+weather.currently+'</li>';
-		    //html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
-		  
 		    $(".current-weather").html(html);
 	    },
 	    error: function(error) {
 	      $(".current-weather").html('<p>'+error+'</p>');
 	    }
   	});
-
 
 
 });	
