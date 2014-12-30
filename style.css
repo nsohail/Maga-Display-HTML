@@ -18,12 +18,12 @@ body {
 .container {
 	margin: 0 auto;
 	width: 100%;
-	height: 900px;
+	height: 750px;
 }
 
 .row {
 	width: 23.5%;
-	height: 883px;
+	height: 733px;
 	/* border: 1px solid white; */
 	float: left;
 	margin-right: 2%;
@@ -74,7 +74,7 @@ p {
 
 .meetings-box {
 	background: rgba(113, 177, 208, 0.95);
-	height: 547px;
+	height: 398px;
 	margin-bottom: 0;
 }
 
