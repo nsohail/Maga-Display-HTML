@@ -35,6 +35,7 @@ body {
 p {
 	color: #dddddd;
 	font-family: flexo-regular;
+	line-height: 24px;
 }
 
 .row > section > p {
@@ -84,6 +85,7 @@ p {
 	padding: 16px;
 	padding-bottom: 5px;
 	font-family: flexo-medium;
+	letter-spacing: 2px;
 }
 
 .corner-background {
@@ -132,6 +134,7 @@ p {
 	padding-top: 18px;
 	font-family: flexo-regular;
 	color: white;
+	letter-spacing: 2px;
 }
 
 .current-day {
@@ -141,6 +144,7 @@ p {
 	font-family: flexo-regular;
 	color: white;
 	font-weight: 100;
+	letter-spacing: 1px;
 }
 
 .current-weather {
@@ -151,6 +155,7 @@ p {
 	color: #002545;
 	/* font-weight: 100; */
 	padding-top: 10px;
+	letter-spacing: 2px;
 }
 
 .title {
@@ -163,6 +168,7 @@ p {
 
 .title-highlight {
 	font-family: flexo-medium;
+	letter-spacing: 2px;
 }
 
 .announcements, .events {
@@ -183,6 +189,7 @@ p {
 	font-size: 16px;
 	width: 190px;
 	color: #dddddd;
+	line-height: 24px;
 }
 
 .event-date {
