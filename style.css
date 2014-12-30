@@ -1,3 +1,13 @@
+@font-face {
+    font-family: flexo-medium;
+    src: url(Fonts/Flexo-Medium.otf);
+}
+
+@font-face {
+    font-family: flexo-regular;
+    src: url(Fonts/Flexo-Regular.otf);
+}
+
 body {
 	background-image: url('google-image.jpg');
 	background-repeat: no-repeat;
@@ -22,6 +32,10 @@ body {
 	color: white;
 }
 
+p {
+	color: #dddddd;
+	font-family: flexo-regular;
+}
 
 .row > section > p {
 	padding: 15px;
@@ -65,17 +79,18 @@ body {
 
 .corner-title {
 	color: white;
-	font-size: 1em;
-	font-family: sans-serif;
+	font-size: 12px;
 	text-align: left;
-	padding: 8px;
+	padding: 16px;
+	padding-bottom: 5px;
+	font-family: flexo-medium;
 }
 
 .corner-background {
-	height: 20px;
-	width: 20px;
+	height: 24px;
+	width: 33px;
 	position: absolute;
-	top: 4px;
+	top: 8px;
 	right: 8px;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -92,6 +107,10 @@ body {
 
 .meetings {
 	background-image: url('meetings.png');
+}
+
+.corner-highlight {
+	color: #002545;
 }
 
 .offsite {
@@ -111,15 +130,15 @@ body {
 	font-size: 49px;
 	padding: 5px;
 	padding-top: 18px;
-	font-family: sans-serif;
+	font-family: flexo-regular;
 	color: white;
 }
 
 .current-day {
 	text-align: center;
-	font-size: 22px;
+	font-size: 24px;
 	padding: 5px;
-	font-family: sans-serif;
+	font-family: flexo-regular;
 	color: white;
 	font-weight: 100;
 }
@@ -128,7 +147,7 @@ body {
 	text-align: center;
 	font-size: 44px;
 	padding: 5px;
-	font-family: sans-serif;
+	font-family: flexo-medium;
 	color: #002545;
 	/* font-weight: 100; */
 	padding-top: 10px;
@@ -138,6 +157,12 @@ body {
 	padding: 15px;
 	font-size: 24px;
 	padding-bottom: 30px;
+	font-family: flexo-medium;
+}
+
+
+.title-highlight {
+	font-family: flexo-medium;
 }
 
 .announcements, .events {
@@ -150,12 +175,14 @@ body {
 
 .highlight {
 	font-weight: 600;
+	color: white;
 }
 
 .event-info {
 	float: right;
 	font-size: 16px;
 	width: 190px;
+	color: #dddddd;
 }
 
 .event-date {
@@ -165,4 +192,5 @@ body {
 .event {
 	overflow: overlay;
 	padding-top: 15px;
+	font-family: flexo-regular;
 }
