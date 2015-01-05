@@ -8,6 +8,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script>google.load("gdata", "1");</script>
+
 
 
 </head>
@@ -32,6 +34,23 @@
 			<section class="sub-box meetings-box">
 				<div class="corner-title corner-highlight">MEETINGS</div>
 				<div class="corner-background meetings"></div> 
+				<div class="meetings-section">
+					<span class="meeting-h1">NEXT MEETING</span>
+					<div class="next-meetings-section">
+						<div class="meeting-info next-meeting-time"></div>
+						<div class="meeting-info next-meeting-title"></div>
+						<div class="meeting-info next-meeting-location"></div>
+					</div>
+
+					<span class="meeting-h2">UPCOMING MEETINGS</span>
+					<div class="upcoming-meetings-section">
+						<!--<div class="meeting-info upcoming-meeting-time"></div>
+						<div class="meeting-info upcoming-meeting-title"></div>
+						<div class="meeting-info upcoming-meeting-location"></div>-->
+					</div>
+				</div>
+
+
 			</section>
 		</div>
 
@@ -109,13 +128,14 @@
 	
 	</div><!--container ends-->
 
-
+	<div class="maga-logo"></div>
 
 </body>
 
 <script>
 
 $(document).ready(function () {
+
 
 	var currentDate = new Date();
 
@@ -131,7 +151,7 @@ $(document).ready(function () {
 		hours = hours % 12;
 		hours = hours ? hours : 12; //explain this
 		var displayTime = hours + ':' + minutes + ' ' + ampm;
-		console.log(displayTime);
+		//console.log(displayTime);
 		$('.row1').find($('.current-time')).text(displayTime);
 
 		window.setTimeout (function(){
@@ -198,31 +218,60 @@ $(document).ready(function () {
 	    }
   	});
 
+	
 
-	// google.load("gdata", "1");
-	// google.setOnLoadCallback(getMyFeed);
 
- //  	var myService;
-	// var feedUrl = "https://www.google.com/calendar/feeds/neha@magadesign.com/public/full";
 
-	// function setupMyService() {
-	//   myService = new google.gdata.calendar.CalendarService('exampleCo-exampleApp-1');
-	// }
 
-	// function getMyFeed() {
-	//   setupMyService();
+	google.setOnLoadCallback(callback);
 
-	//   myService.getEventsFeed(feedUrl, handleMyFeed, handleError);
-	// }
+	// Create the calendar service object
+	var calendarService = new google.gdata.calendar.CalendarService('GoogleInc-jsguide-1.0');
 
-	// function handleMyFeed(myResultsFeedRoot) {
-	//   alert("This feed's title is: " + myResultsFeedRoot.feed.getTitle().getText());
-	// }
+	var feedUrl = 'https://www.google.com/calendar/feeds/jabarganoil.com_lt7a9btck0os8vv002dae2m4ms%40group.calendar.google.com/public/basic?futureevents=true&sortorder=ascending';
 
-	// function handleError(e) {
-	//   alert("There was an error!");
-	//   alert(e.cause ? e.cause.statusText : e.message);
-	// }
+
+	// The callback method that will be called when getAllCalendarsFeed() returns feed data
+	var callback = function(result) {
+		var entries = result.feed.entry;
+
+		if(entries==0){
+			alert("There are no events");
+		}
+		
+		var nextMeetingEntry = entries[0];
+		var nextMeetingTitle = nextMeetingEntry.getTitle().getText();
+		var nextMeetingWhen = nextMeetingEntry.getSummary().getText();
+		$('.row1').find($('.next-meeting-time')).html(nextMeetingWhen);
+		$('.row1').find($('.next-meeting-title')).html(nextMeetingTitle);
+
+		for (var i = 1; i < 3; i++) {  //i < 3 only shows 2 results at a time
+		  	//console.log(entries[i]); 
+		
+		    var calendarEntryUpcoming = entries[i];
+		    console.log(calendarEntryUpcoming);
+		    var calendarTitle = calendarEntryUpcoming.getTitle().getText();
+		    var calendarWhen = calendarEntryUpcoming.getSummary().getText();
+		    //console.log(calendarWhen);
+		    $('.row1').find($('.upcoming-meetings-section')).append('<div class="meeting-info upcoming-meeting-time">' + calendarWhen + '</div>');
+		    $('.row1').find($('.upcoming-meetings-section')).append('<div class="meeting-info upcoming-meeting-title">' + calendarTitle + '</div>');
+		}
+
+		window.setTimeout(function(){
+			$('.upcoming-meetings-section').empty();
+			calendarService.getAllCalendarsFeed(feedUrl, callback, handleError);
+			console.log("calendar refreshed");
+		}, 500*1000);
+
+	}
+
+	// Error handler to be invoked when getAllCalendarsFeed() produces an error
+	var handleError = function(error) {
+	  console.log(error);
+	}
+
+	// Submit the request using the calendar service object
+	calendarService.getAllCalendarsFeed(feedUrl, callback, handleError);
 
 
 });	

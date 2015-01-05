@@ -18,12 +18,12 @@ body {
 .container {
 	margin: 0 auto;
 	width: 100%;
-	height: 850px;
+	height: 800px;
 }
 
 .row {
 	width: 23.5%;
-	height: 833px;
+	height: 800px;
 	/* border: 1px solid white; */
 	float: left;
 	margin-right: 2%;
@@ -64,17 +64,17 @@ p {
 
 .time-box {
 	background: rgba(234, 140, 44, 0.95);
-	height: 180px;
+	height: 160px;
 }
 
 .weather-box {
 	background: rgba(206, 212, 215, 0.95);
-	height: 120px;
+	height: 100px;
 }
 
 .meetings-box {
 	background: rgba(113, 177, 208, 0.95);
-	height: 498px;
+	height: 504px;
 	margin-bottom: 0;
 }
 
@@ -101,14 +101,17 @@ p {
 
 .today {
 	background-image: url('calendar.png');
+	background-repeat: no-repeat;
 }
 
 .weather {
 	background-image: url('weather.png');
+	background-repeat: no-repeat;
 }
 
 .meetings {
 	background-image: url('meetings.png');
+	background-repeat: no-repeat;
 }
 
 .corner-highlight {
@@ -130,8 +133,7 @@ p {
 .current-time {
 	text-align: center;
 	font-size: 49px;
-	padding: 5px;
-	padding-top: 18px;
+	padding: 18px 10px 0 10px;
 	font-family: flexo-regular;
 	color: white;
 	letter-spacing: 2px;
@@ -140,7 +142,7 @@ p {
 .current-day {
 	text-align: center;
 	font-size: 24px;
-	padding: 5px;
+	padding: 0 5px 5px 5px;
 	font-family: flexo-regular;
 	color: white;
 	font-weight: 100;
@@ -154,7 +156,6 @@ p {
 	font-family: flexo-medium;
 	color: #002545;
 	/* font-weight: 100; */
-	padding-top: 10px;
 	letter-spacing: 2px;
 }
 
@@ -200,4 +201,46 @@ p {
 	overflow: overlay;
 	padding-top: 15px;
 	font-family: flexo-regular;
+}
+
+
+.meetings-section {
+	font-family: flexo-regular;
+	padding: 16px;
+	margin-bottom: 10px;
+	margin-top: 4px;
+}
+
+.next-meetings-section {
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-top: 4px;
+}
+
+.upcoming-meetings-section {
+	font-size: 16px;
+}
+
+.meeting-h1 {
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.meeting-h2 {
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+.meeting-info {
+	color: #dddddd;
+	padding-bottom: 5px;
+}
+
+
+.maga-logo {
+	background-image: url('maga-logo.png');
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	background-size: 30px;
+	height: 60px;
 }
