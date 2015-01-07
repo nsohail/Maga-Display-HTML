@@ -44,12 +44,8 @@
 
 					<span class="meeting-h2">UPCOMING MEETINGS</span>
 					<div class="upcoming-meetings-section">
-						<!--<div class="meeting-info upcoming-meeting-time"></div>
-						<div class="meeting-info upcoming-meeting-title"></div>
-						<div class="meeting-info upcoming-meeting-location"></div>-->
 					</div>
 				</div>
-
 
 			</section>
 		</div>
@@ -225,14 +221,15 @@ $(document).ready(function () {
 
 	google.setOnLoadCallback(callback);
 
-	// Create the calendar service object
-	var calendarService = new google.gdata.calendar.CalendarService('GoogleInc-jsguide-1.0');
+	
 
-	var feedUrl = 'https://www.google.com/calendar/feeds/jabarganoil.com_lt7a9btck0os8vv002dae2m4ms%40group.calendar.google.com/public/basic?futureevents=true&sortorder=ascending';
-
+	
 
 	// The callback method that will be called when getAllCalendarsFeed() returns feed data
 	var callback = function(result) {
+
+		console.log(result);
+
 		var entries = result.feed.entry;
 
 		if(entries==0){
@@ -240,28 +237,34 @@ $(document).ready(function () {
 		}
 		
 		var nextMeetingEntry = entries[0];
+		
+
 		var nextMeetingTitle = nextMeetingEntry.getTitle().getText();
 		var nextMeetingWhen = nextMeetingEntry.getSummary().getText();
 		$('.row1').find($('.next-meeting-time')).html(nextMeetingWhen);
 		$('.row1').find($('.next-meeting-title')).html(nextMeetingTitle);
 
 		for (var i = 1; i < 3; i++) {  //i < 3 only shows 2 results at a time
-		  	//console.log(entries[i]); 
 		
 		    var calendarEntryUpcoming = entries[i];
-		    console.log(calendarEntryUpcoming);
+		    //console.log(calendarEntryUpcoming);
+
+		    var times = calendarEntryUpcoming.getTimes();
+			console.log(times);
+
+
 		    var calendarTitle = calendarEntryUpcoming.getTitle().getText();
 		    var calendarWhen = calendarEntryUpcoming.getSummary().getText();
-		    //console.log(calendarWhen);
+
 		    $('.row1').find($('.upcoming-meetings-section')).append('<div class="meeting-info upcoming-meeting-time">' + calendarWhen + '</div>');
 		    $('.row1').find($('.upcoming-meetings-section')).append('<div class="meeting-info upcoming-meeting-title">' + calendarTitle + '</div>');
 		}
 
-		window.setTimeout(function(){
-			$('.upcoming-meetings-section').empty();
-			calendarService.getAllCalendarsFeed(feedUrl, callback, handleError);
-			console.log("calendar refreshed");
-		}, 500*1000);
+		// window.setTimeout(function(){
+		// 	$('.upcoming-meetings-section').empty();
+		// 	calendarService.getAllCalendarsFeed(feedUrl, callback, handleError);
+		// 	console.log("calendar refreshed");
+		// }, 500*1000);
 
 	}
 
@@ -270,8 +273,26 @@ $(document).ready(function () {
 	  console.log(error);
 	}
 
-	// Submit the request using the calendar service object
-	calendarService.getAllCalendarsFeed(feedUrl, callback, handleError);
+
+
+
+
+	var myService;
+	// Create the calendar service object
+	myService = new google.gdata.calendar.CalendarService('GoogleInc-jsguide-1.0');
+	logMeIn();
+
+	var feedUrl = 'https://www.google.com/calendar/feeds/magadesign.com_3337343339303832393534@resource.calendar.google.com/private/full?futureevents=true&sortorder=ascending';
+
+	function logMeIn() {
+	  scope = "https://www.google.com/calendar/feeds/";
+	  var token = google.accounts.user.login(scope);
+	}
+
+	var query = new google.gdata.calendar.CalendarEventQuery(feedUrl);
+
+    // Submit the request using the calendar service object
+	myService.getEventsFeed(query, callback, handleError);	
 
 
 });	
