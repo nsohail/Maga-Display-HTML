@@ -244,3 +244,9 @@ p {
 	background-size: 30px;
 	height: 60px;
 }
+
+#authorize-button {
+	width: 80px;
+	height: 80px;
+	background: red;
+}

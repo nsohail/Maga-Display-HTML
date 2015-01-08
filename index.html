@@ -32,6 +32,8 @@
 			</section>
 
 			<section class="sub-box meetings-box">
+				<div id="authorize-button"></div>
+				<div id="content"></div>
 				<div class="corner-title corner-highlight">MEETINGS</div>
 				<div class="corner-background meetings"></div> 
 				<div class="meetings-section">
@@ -223,8 +225,8 @@ $(document).ready(function () {
 
 	
 
-	
-/*
+	/*
+
 	// The callback method that will be called when getAllCalendarsFeed() returns feed data
 	var callback = function(result) {
 
@@ -273,21 +275,40 @@ $(document).ready(function () {
 	  console.log(error);
 	}
 
+
+
+	var myService;
+	// Create the calendar service object
+	myService = new google.gdata.calendar.CalendarService('GoogleInc-jsguide-1.0');
+	logMeIn();
+
+	var feedUrl = 'https://www.google.com/calendar/feeds/magadesign.com_3337343339303832393534%40resource.calendar.google.com/private/basic?futureevents=true&sortorder=ascending';
+
+	function logMeIn() {
+	  scope = "http://www.google.com/calendar/feeds/default/allcalendars/full";
+	  var token = google.accounts.user.login(scope);
+	}
+
+	var query = new google.gdata.calendar.CalendarEventQuery(feedUrl);
+
+    // Submit the request using the calendar service object
+	myService.getEventsFeed(query, callback, handleError);	
+
+
 */
 
-	// the parameters we need to pass in our request to StackOverflow's API
+/*
+	//Using REST api
 	var requestUrl = {
-		calendarId : "magadesign.com_3337343339303832393534@resource.calendar.google.com"
+		calendarId : "jabarganoil.com_lt7a9btck0os8vv002dae2m4ms@group.calendar.google.com"
 	};
-
-	var data = "https://www.googleapis.com/calendar/v3/calendars/magadesign.com_3337343339303832393534@resource.calendar.google.com/events";
 
 	var callbackSuccess = function(results){
 		console.log(results);
 	}
 
 	$.get({
-	  url: data,
+	  //url: "https://www.googleapis.com/calendar/v3/calendars/" + calendarId + "/events",
 	  data: requestUrl,
 	  success: callbackSuccess,
 	  dataType: "jsonp"
@@ -299,28 +320,14 @@ $(document).ready(function () {
 	.fail(function(error){
 		alert("It failed due to this" + error);
 	});
+*/
+
 	
-
-
-	// var myService;
-	// // Create the calendar service object
-	// myService = new google.gdata.calendar.CalendarService('GoogleInc-jsguide-1.0');
-	// logMeIn();
-
-	// var feedUrl = 'https://www.google.com/calendar/feeds/magadesign.com_3337343339303832393534%40resource.calendar.google.com/private/basic?futureevents=true&sortorder=ascending';
-
-	// function logMeIn() {
-	//   scope = "https://www.googleapis.com/auth/calendar.readonly";
-	//   var token = google.accounts.user.login(scope);
-	// }
-
-	// var query = new google.gdata.calendar.CalendarEventQuery(feedUrl);
-
- //    // Submit the request using the calendar service object
-	// myService.getEventsFeed(query, callback, handleError);	
-
 });	
 	
 
 </script>
+
+<script src="calendar.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 </html>
