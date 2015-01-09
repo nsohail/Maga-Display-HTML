@@ -36,20 +36,14 @@ function handleAuthClick(event) {
 // Load the API and make an API call.  Display the results on the screen.
 function makeApiCall() {
   // Step 4: Load the Google+ API
-  gapi.client.load('plus', 'v1').then(function() {
+  gapi.client.load('calendar', 'v3').then(function() {
     // Step 5: Assemble the API request
-    var request = gapi.client.plus.people.get({
-      'userId': 'me'
+    var request = gapi.client.calendar.events.list({
+      'calendarId': 'magadesign.com_3337343339303832393534@resource.calendar.google.com'
     });
     // Step 6: Execute the API request
     request.then(function(resp) {
-      var heading = document.createElement('h4');
-      var image = document.createElement('img');
-      image.src = resp.result.image.url;
-      heading.appendChild(image);
-      heading.appendChild(document.createTextNode(resp.result.displayName));
-
-      document.getElementById('content').appendChild(heading);
+      console.log(resp.result);
     }, function(reason) {
       console.log('Error: ' + reason.result.error.message);
     });
