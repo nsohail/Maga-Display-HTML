@@ -35,7 +35,7 @@ function handleAuthClick(event) {
 
 // Load the API and make an API call.  Display the results on the screen.
 function makeApiCall() {
-  // Step 4: Load the Google+ API
+  // Step 4: Load the Google calendar API
   gapi.client.load('calendar', 'v3').then(function() {
     // Step 5: Assemble the API request
     var request = gapi.client.calendar.events.list({
@@ -43,7 +43,7 @@ function makeApiCall() {
     });
     // Step 6: Execute the API request
     request.then(function(callbackResponse) {
-      console.log(callbackResponse.result);
+      console.log(callbackResponse);
     }, function(errorReason) {
       console.log('Error: ' + errorReason.result.error.message);
     });
