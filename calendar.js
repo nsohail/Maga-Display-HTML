@@ -2,7 +2,7 @@ var clientId = '727304281402-2r6jn1l2jutllr07nc5ngba9omfqjand.apps.googleusercon
 
 var apiKey = 'AIzaSyDk7clYywa4fx8t6lYOs4C20GfxK6MAQEE';
 
-var scopes = 'https://www.googleapis.com/auth/plus.login';
+var scopes = 'https://www.googleapis.com/auth/calendar';
 
 
 
@@ -42,12 +42,13 @@ function makeApiCall() {
       'calendarId': 'magadesign.com_3337343339303832393534@resource.calendar.google.com'
     });
     // Step 6: Execute the API request
-    request.then(function(resp) {
-      console.log(resp.result);
-    }, function(reason) {
-      console.log('Error: ' + reason.result.error.message);
+    request.then(function(callbackResponse) {
+      console.log(callbackResponse.result);
+    }, function(errorReason) {
+      console.log('Error: ' + errorReason.result.error.message);
     });
   });
+
 }
 
 
