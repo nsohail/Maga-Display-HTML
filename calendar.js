@@ -1,8 +1,8 @@
 var clientId = '727304281402-2r6jn1l2jutllr07nc5ngba9omfqjand.apps.googleusercontent.com';
 
-var apiKey = 'AIzaSyAdjHPT5Pb7Nu56WJ_nlrMGOAgUAtKjiPM';
+var apiKey = 'AIzaSyDk7clYywa4fx8t6lYOs4C20GfxK6MAQEE';
 
-var scopes = 'https://www.googleapis.com/auth/plus.me';
+var scopes = 'https://www.googleapis.com/auth/plus.login';
 
 
 
