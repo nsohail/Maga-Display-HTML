@@ -43,7 +43,7 @@ function makeApiCall() {
     });
     // Step 6: Execute the API request
     request.then(function(callbackResponse) {
-      console.log(callbackResponse);
+      console.log(callbackResponse.result);
     }, function(errorReason) {
       console.log('Error: ' + errorReason.result.error.message);
     });
