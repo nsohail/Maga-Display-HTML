@@ -55,7 +55,7 @@ function makeApiCall() {
       var nextMeetingTime = nextMeeting.start;
       var nextMeetingTitle = nextMeeting.summary;
       var nextMeetingLocation = nextMeeting.location;
-      
+
       console.log(nextMeetingTitle);
       console.log(nextMeetingLocation);
     
@@ -63,9 +63,11 @@ function makeApiCall() {
         console.log(nextMeetingTime[x]);
       }
 
-      // for (var i = 1; i < 3; i++) {
-      //   var items = callbackResponse.result.items[i];
-      // }
+      //show other results
+
+      for (var i = 1; i < 3; i++) {
+        var upcomingItems = entries[i];
+      }
        
 
     }, function(errorReason) {
