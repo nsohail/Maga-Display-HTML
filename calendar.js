@@ -62,12 +62,12 @@ function makeApiCall() {
       //console.log("This is the next meeting");
       for (var x in nextMeetingTime) {
         //console.log(nextMeetingTime[x]);
-        $('.next-meetings-section').find('next-meeting-time').html(nextMeetingTime[x]);
+        $('.next-meetings-section').find('.next-meeting-time').html(nextMeetingTime[x]);
       }
       //console.log(nextMeetingTitle);
-      $('.next-meetings-section').find('next-meeting-title').html(nextMeetingTitle);
+      $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
       //console.log(nextMeetingLocation);
-      $('.next-meetings-section').find('next-meeting-Location').html(nextMeetingLocation);
+      $('.next-meetings-section').find('.next-meeting-Location').html(nextMeetingLocation);
     
       
 
