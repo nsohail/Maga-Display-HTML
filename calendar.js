@@ -67,7 +67,7 @@ function makeApiCall() {
       //console.log(nextMeetingTitle);
       $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
       //console.log(nextMeetingLocation);
-      $('.next-meetings-section').find('.next-meeting-Location').html(nextMeetingLocation);
+      $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
     
       
 
