@@ -61,11 +61,11 @@ function makeApiCall() {
     
       for (var x in nextMeetingTime) {
         console.log(x);
-        // if(x==dateTime){
-        //   console.log(nextMeetingTime[x]);
-        // }else{
-        //   console.log("No time");
-        // }
+        if(x===dateTime){
+          console.log(nextMeetingTime[x]);
+        }else{
+          console.log("No time");
+        }
       }
 
       // for (var i = 1; i < 3; i++) {
