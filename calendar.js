@@ -55,11 +55,11 @@ function makeApiCall() {
 
       //for the next meeting section
       var nextMeeting = entries[0];
-      //console.log(nextMeeting);
+      console.log(nextMeeting);
       var nextMeetingTime = nextMeeting.start;
       var nextMeetingTitle = nextMeeting.summary;
       var nextMeetingLocation = nextMeeting.location;
-      console.log("This is the next meeting");
+      //console.log("This is the next meeting");
       for (var x in nextMeetingTime) {
         //console.log(nextMeetingTime[x]);
         $('.next-meetings-section').find('next-meeting-time').html(nextMeetingTime[x]);
@@ -72,7 +72,7 @@ function makeApiCall() {
       
 
       //for upcoming meetings
-      console.log("These are the upcoming meetings");
+      //console.log("These are the upcoming meetings");
       for (var i = 1; i < 3; i++) {
         var upcomingItems = entries[i];
         var upcomingTime = upcomingItems.start;
