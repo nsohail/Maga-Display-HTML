@@ -58,10 +58,14 @@ function makeApiCall() {
       console.log(nextMeetingTime);
       console.log(nextMeetingTitle);
       console.log(nextMeetingLocation);
-
-      for (var i = 1; i < 3; i++) {
-        var items = callbackResponse.result.items[i];
+    
+      for (var x in entries) {
+        console.log("datetime" + x + " = " + entries[x]);
       }
+
+      // for (var i = 1; i < 3; i++) {
+      //   var items = callbackResponse.result.items[i];
+      // }
        
 
     }, function(errorReason) {
