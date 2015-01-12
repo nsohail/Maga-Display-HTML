@@ -45,9 +45,9 @@ function makeApiCall() {
     // Step 6: Execute the API request
     request.then(function(callbackResponse) {
       var items = callbackResponse.result.items;
-      var itemTime = items.start.dateTime;
+      var itemTime = items.start;
       console.log(itemTime);
-      
+
     }, function(errorReason) {
       console.log('Error: ' + errorReason.result.error.message);
     });
