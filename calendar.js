@@ -46,7 +46,8 @@ function makeApiCall() {
     request.then(function(callbackResponse) {
       var items = callbackResponse.result.items;
       var itemTime = items.start;
-      console.log(items);
+      console.log(itemTime);
+      console.log(items.summary);
 
     }, function(errorReason) {
       console.log('Error: ' + errorReason.result.error.message);
