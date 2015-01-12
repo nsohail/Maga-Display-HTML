@@ -44,8 +44,17 @@ function makeApiCall() {
     });
     // Step 6: Execute the API request
     request.then(function(callbackResponse) {
-      var items = callbackResponse.result.items[0]; //returns an array entries
-      console.log(items.summary);
+
+      var entries = callbackResponse.result.items; //returns an array entries
+
+      if (entries === 0) {
+        alert ("There are no events");
+      }
+
+      var nextMeeting = entries[1];
+      console.log(nextMeeting);
+
+       
 
     }, function(errorReason) {
       console.log('Error: ' + errorReason.result.error.message);
