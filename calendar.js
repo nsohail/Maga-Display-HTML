@@ -52,8 +52,16 @@ function makeApiCall() {
       }
 
       var nextMeeting = entries[1];
-      console.log(nextMeeting);
+      var nextMeetingTime = nextMeeting.start;
+      var nextMeetingTitle = nextMeeting.summary;
+      var nextMeetingLocation = nextMeeting.location;
+      console.log(nextMeetingTime);
+      console.log(nextMeetingTitle);
+      console.log(nextMeetingLocation);
 
+      for (var i = 1; i < 3; i++) {
+        var items = callbackResponse.result.items[i];
+      }
        
 
     }, function(errorReason) {
