@@ -65,14 +65,13 @@ function makeApiCall() {
       
 
       //show other results
-
+      console.log("These are the upcoming meetings");
       for (var i = 1; i < 3; i++) {
         var upcomingItems = entries[i];
         var upcomingTime = upcomingItems.start;
         var upcomingTitle = upcomingItems.summary;
         var upcomingLocation = upcomingItems.location;
         
-        console.log("These are the upcoming meetings");
         for(x in upcomingTime){
           console.log(upcomingTime[x]);
         }
