@@ -218,7 +218,13 @@ p {
 }
 
 .upcoming-meetings-section {
-	font-size: 16px;
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-top: 4px;
+}
+
+.next-meeting-location {
+	margin-bottom: 22px
 }
 
 .meeting-h1 {
@@ -232,7 +238,7 @@ p {
 }
 
 .meeting-info {
-	color: #dddddd;
+	color: #E4E4E4;;
 	padding-bottom: 5px;
 }
 
