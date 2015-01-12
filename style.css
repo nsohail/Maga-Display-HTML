@@ -246,7 +246,7 @@ p {
 }
 
 #authorize-button {
-	width: 80px;
-	height: 80px;
-	background: red;
+	width: 30px;
+	height: 10px;
+	background: rgb(18, 188, 207);
 }

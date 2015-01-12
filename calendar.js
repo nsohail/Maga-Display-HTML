@@ -47,25 +47,31 @@ function makeApiCall() {
 
       var entries = callbackResponse.result.items; //returns an array entries
 
+      //if there are no entries
       if (entries === 0) {
         alert ("There are no events");
       }
 
-      var nextMeeting = entries[1];
-      console.log(nextMeeting);
+
+      //for the next meeting section
+      var nextMeeting = entries[0];
+      //console.log(nextMeeting);
       var nextMeetingTime = nextMeeting.start;
       var nextMeetingTitle = nextMeeting.summary;
       var nextMeetingLocation = nextMeeting.location;
       console.log("This is the next meeting");
       for (var x in nextMeetingTime) {
-        console.log(nextMeetingTime[x]);
+        //console.log(nextMeetingTime[x]);
+        $('.next-meetings-section').find('next-meeting-time').html(nextMeetingTime[x]);
       }
-      console.log(nextMeetingTitle);
-      console.log(nextMeetingLocation);
+      //console.log(nextMeetingTitle);
+      $('.next-meetings-section').find('next-meeting-title').html(nextMeetingTitle);
+      //console.log(nextMeetingLocation);
+      $('.next-meetings-section').find('next-meeting-Location').html(nextMeetingLocation);
     
       
 
-      //show other results
+      //for upcoming meetings
       console.log("These are the upcoming meetings");
       for (var i = 1; i < 3; i++) {
         var upcomingItems = entries[i];
@@ -74,10 +80,13 @@ function makeApiCall() {
         var upcomingLocation = upcomingItems.location;
         
         for(x in upcomingTime){
-          console.log(upcomingTime[x]);
+          //console.log(upcomingTime[x]);
+          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time">'+upcomingTime[x]+'</div>');
         }
-        console.log(upcomingTitle);
-        console.log(upcomingLocation);
+        //console.log(upcomingTitle);
+        $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-title">'+upcomingTitle+'</div>');
+        //console.log(upcomingLocation);
+        $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-location">'+upcomingLocation+'</div>');
       }
        
 
