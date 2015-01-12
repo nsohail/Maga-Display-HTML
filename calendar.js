@@ -52,6 +52,7 @@ function makeApiCall() {
       }
 
       var nextMeeting = entries[1];
+      console.log(nextMeeting);
       var nextMeetingTime = nextMeeting.start;
       var nextMeetingTitle = nextMeeting.summary;
       var nextMeetingLocation = nextMeeting.location;
