@@ -61,7 +61,7 @@ function makeApiCall() {
     
       for (var x in nextMeetingTime) {
         console.log(x);
-        if(x===[dateTime]){
+        if(x = dateTime){
           console.log(nextMeetingTime[x]);
         }else{
           console.log("No time");
