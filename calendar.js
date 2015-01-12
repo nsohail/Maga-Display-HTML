@@ -44,7 +44,7 @@ function makeApiCall() {
     });
     // Step 6: Execute the API request
     request.then(function(callbackResponse) {
-      var items = callbackResponse.result;
+      var items = callbackResponse.result.items;
       console.log(items);
 
     }, function(errorReason) {
