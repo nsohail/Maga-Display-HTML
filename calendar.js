@@ -59,7 +59,7 @@ function makeApiCall() {
       console.log(nextMeetingTitle);
       console.log(nextMeetingLocation);
     
-      for (var x in entries) {
+      for (var x in nextMeetingTime) {
         console.log("datetime" + x + " = " + entries[x]);
       }
 
