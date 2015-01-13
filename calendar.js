@@ -84,6 +84,7 @@ function makeApiCall() {
           var dateX = upcomingTime[x];
           // var formatDate = new Date(Date.parse(dateX));
           // console.log(formatDate);
+          parseGoogleDate();
 
           function parseGoogleDate(d) {
               var m = dateX.exec(d);
