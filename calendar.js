@@ -82,27 +82,9 @@ function makeApiCall() {
         for(x in upcomingTime){
           console.log(upcomingItems);
           var dateX = upcomingTime[x];
-          // var formatDate = new Date(Date.parse(dateX));
-          // console.log(formatDate);
-          parseGoogleDate();
-
-          function parseGoogleDate(d) {
-              var m = dateX.exec(d);
-              var year   = +m[1];
-              var month  = +m[2];
-              var day    = +m[3];
-              var hour   = +m[4];
-              var minute = +m[5];
-              var second = +m[6];
-              var msec   = +m[7];
-              var tzHour = +m[8];
-              var tzMin  = +m[9];
-              var tzOffset = new Date().getTimezoneOffset() + tzHour * 60 + tzMin;
-
-              var Mock = new Date(year, month - 1, day, hour, minute - tzOffset, second, msec);
-              console.log(Mock);
-          }
-                    
+          var format = new Date(Date.parse(dateX));
+          console.log(newOne);
+          
 
           //console.log(upcomingTime[x]);
           $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time">'+upcomingTime[x]+'</div>');
