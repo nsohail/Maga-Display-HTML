@@ -80,6 +80,7 @@ function makeApiCall() {
         var upcomingLocation = upcomingItems.location;
         
         for(x in upcomingTime){
+          console.log(upcomingItems);
           var dateX = upcomingTime[x];
           console.log(dateX);
           var dateText = dateX.toString();
