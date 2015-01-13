@@ -81,9 +81,10 @@ function makeApiCall() {
         
         for(x in upcomingTime){
           var dateX = upcomingTime[x];
-          var d = new dateX();
-          var date = d.toISOString();
-          console.log(date);
+          console.log(dateX);
+          var dateText = dateX.toISOString();
+          console.log(dateText);
+          
           //console.log(upcomingTime[x]);
           $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time">'+upcomingTime[x]+'</div>');
         }
