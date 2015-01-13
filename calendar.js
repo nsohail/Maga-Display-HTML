@@ -55,7 +55,7 @@ function makeApiCall() {
 
       //for the next meeting section
       var nextMeeting = entries[0];
-      console.log(nextMeeting);
+      //console.log(nextMeeting);
       var nextMeetingTime = nextMeeting.start;
       var nextMeetingTitle = nextMeeting.summary;
       var nextMeetingLocation = nextMeeting.location;
@@ -80,6 +80,10 @@ function makeApiCall() {
         var upcomingLocation = upcomingItems.location;
         
         for(x in upcomingTime){
+          var dateX = upcomingTime[x];
+          var d = new dateX();
+          var date = d.toISOString();
+          console.log(date);
           //console.log(upcomingTime[x]);
           $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time">'+upcomingTime[x]+'</div>');
         }
