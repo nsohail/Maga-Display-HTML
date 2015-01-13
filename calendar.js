@@ -82,8 +82,8 @@ function makeApiCall() {
         for(x in upcomingTime){
           console.log(upcomingItems);
           var dateX = upcomingTime[x];
-          new Date(Date.parse(dateX));
-          console.log(dateX);
+          var newOne = new Date(Date.parse(dateX));
+          console.log(newOne);
           
 
           //console.log(upcomingTime[x]);
