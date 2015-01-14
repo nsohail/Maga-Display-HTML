@@ -91,7 +91,7 @@ function makeApiCall() {
           var upcomingStartFormat = new Date(upcomingStart).toString('hh:mm tt');
           var upcomingEndFormat = new Date(upcomingEnd).toString('hh:mm tt');
           
-          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-start">'+upcomingStartFormat+'</div>');
+          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-start">'+upcomingStartFormat+' '+' "-"</div>');
           $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-end">'+upcomingEndFormat+'</div>');
         }
 
