@@ -39,12 +39,14 @@ function makeApiCall() {
   gapi.client.load('calendar', 'v3').then(function() {
     var currentDate = new Date();
     // Step 5: Assemble the API request
+    var start_date = new Date();
     var request = gapi.client.calendar.events.list({
       'calendarId': 'magadesign.com_3337343339303832393534@resource.calendar.google.com',
-      "timeMin": "2015-01-14",
-      "timeMax": "2015-01-14",
-      'singleEvents': true
+      'orderBy': 'startTime',
+      'singleEvents': true,
+      "timeMin": start_date.toISOString()
     });
+    
     // Step 6: Execute the API request
     request.then(function(callbackResponse) {
 
