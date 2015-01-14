@@ -46,7 +46,7 @@ function makeApiCall() {
       'singleEvents': true,
       "timeMin": start_date.toISOString()
     });
-    
+
     // Step 6: Execute the API request
     request.then(function(callbackResponse) {
 
@@ -109,6 +109,10 @@ function makeApiCall() {
       console.log('Error: ' + errorReason.result.error.message);
     });
   });
+
+  window.setTimeout (function(){
+    makeApiCall();
+  }, 10*1000);
 
 }
 
