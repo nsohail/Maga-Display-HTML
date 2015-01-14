@@ -217,115 +217,12 @@ $(document).ready(function () {
 	
 
 
-
-
-	//google.setOnLoadCallback(callback);
-
-	
-
-	/*
-
-	// The callback method that will be called when getAllCalendarsFeed() returns feed data
-	var callback = function(result) {
-
-		console.log(result);
-
-		var entries = result.feed.entry;
-
-		if(entries==0){
-			alert("There are no events");
-		}
-		
-		var nextMeetingEntry = entries[0];
-		
-
-		var nextMeetingTitle = nextMeetingEntry.getTitle().getText();
-		var nextMeetingWhen = nextMeetingEntry.getSummary().getText();
-		$('.row1').find($('.next-meeting-time')).html(nextMeetingWhen);
-		$('.row1').find($('.next-meeting-title')).html(nextMeetingTitle);
-
-		for (var i = 1; i < 3; i++) {  //i < 3 only shows 2 results at a time
-		
-		    var calendarEntryUpcoming = entries[i];
-		    //console.log(calendarEntryUpcoming);
-
-		    var times = calendarEntryUpcoming.getTimes();
-			console.log(times);
-
-
-		    var calendarTitle = calendarEntryUpcoming.getTitle().getText();
-		    var calendarWhen = calendarEntryUpcoming.getSummary().getText();
-
-		    $('.row1').find($('.upcoming-meetings-section')).append('<div class="meeting-info upcoming-meeting-time">' + calendarWhen + '</div>');
-		    $('.row1').find($('.upcoming-meetings-section')).append('<div class="meeting-info upcoming-meeting-title">' + calendarTitle + '</div>');
-		}
-
-		window.setTimeout(function(){
-			$('.upcoming-meetings-section').empty();
-			calendarService.getAllCalendarsFeed(feedUrl, callback, handleError);
-			console.log("calendar refreshed");
-		}, 500*1000);
-
-	}
-
-	// Error handler to be invoked when getAllCalendarsFeed() produces an error
-	var handleError = function(error) {
-	  console.log(error);
-	}
-
-
-
-	var myService;
-	// Create the calendar service object
-	myService = new google.gdata.calendar.CalendarService('GoogleInc-jsguide-1.0');
-	logMeIn();
-
-	var feedUrl = 'https://www.google.com/calendar/feeds/magadesign.com_3337343339303832393534%40resource.calendar.google.com/private/basic?futureevents=true&sortorder=ascending';
-
-	function logMeIn() {
-	  scope = "http://www.google.com/calendar/feeds/default/allcalendars/full";
-	  var token = google.accounts.user.login(scope);
-	}
-
-	var query = new google.gdata.calendar.CalendarEventQuery(feedUrl);
-
-    // Submit the request using the calendar service object
-	myService.getEventsFeed(query, callback, handleError);	
-
-
-*/
-
-/*
-	//Using REST api
-	var requestUrl = {
-		calendarId : "jabarganoil.com_lt7a9btck0os8vv002dae2m4ms@group.calendar.google.com"
-	};
-
-	var callbackSuccess = function(results){
-		console.log(results);
-	}
-
-	$.get({
-	  //url: "https://www.googleapis.com/calendar/v3/calendars/" + calendarId + "/events",
-	  data: requestUrl,
-	  success: callbackSuccess,
-	  dataType: "jsonp"
-	})
-	// .done(function(resultsEntries){
-	// 	console.log(resultsEntries);
-	// })
-
-	.fail(function(error){
-		alert("It failed due to this" + error);
-	});
-*/
-
 	
 });	
 	
 
 </script>
 
-<script src="calendar.js"></script>
+<script src="js/calendar.js"></script>
 <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 </html>
