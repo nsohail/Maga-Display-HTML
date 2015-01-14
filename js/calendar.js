@@ -110,9 +110,9 @@ function makeApiCall() {
     });
   });
 
-  window.setTimeout (function(){
-    makeApiCall();
-  }, 10*1000);
+  // window.setTimeout (function(){
+  //   makeApiCall();
+  // }, 10*1000);
 
 }
 
