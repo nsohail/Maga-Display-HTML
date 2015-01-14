@@ -12,7 +12,7 @@ body {
 	background-image: url('google-image.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin: 40px;
+	margin: 30px;
 }
 
 .container {
@@ -24,7 +24,6 @@ body {
 .row {
 	width: 23.5%;
 	height: 800px;
-	/* border: 1px solid white; */
 	float: left;
 	margin-right: 2%;
 	position: relative;
@@ -55,6 +54,7 @@ p {
 .row4 {
 	background: rgba(67, 110, 140, 0.95);
 	margin-right: 0;
+	width: 23.9%
 }
 
 .sub-box {
@@ -268,7 +268,7 @@ p {
 	background-repeat: no-repeat;
 	background-position: 100% 100%;
 	background-size: 30px;
-	height: 60px;
+	height: 48px;
 }
 
 #authorize-button {
