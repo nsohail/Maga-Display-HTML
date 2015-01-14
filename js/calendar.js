@@ -39,8 +39,9 @@ function makeApiCall() {
   gapi.client.load('calendar', 'v3').then(function() {
     // Step 5: Assemble the API request
     var request = gapi.client.calendar.events.list({
-      'calendarId': 'magadesign.com_3337343339303832393534@resource.calendar.google.com?futureevents=true&sortorder=ascending',
+      'calendarId': 'magadesign.com_3337343339303832393534@resource.calendar.google.com',
       'ordeBy': 'startTime'
+
     });
     // Step 6: Execute the API request
     request.then(function(callbackResponse) {
