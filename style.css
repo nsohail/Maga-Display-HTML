@@ -227,11 +227,11 @@ p {
 	margin-bottom: 22px
 }
 
-.next-meeting-time-start, .upcoming-meeting-time-start {
+.next-meeting-time-start, .upcoming-meeting-time-start, .next-meeting-time-end, .upcoming-meeting-time-end {
 	float: left;
 }
 
-.next-meeting-time-end, .upcoming-meeting-time-end {
+.next-meeting-title, .upcoming-meeting-title {
 	clear: both;
 }
 
