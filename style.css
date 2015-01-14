@@ -214,12 +214,14 @@ p {
 	font-size: 18px;
 	margin-bottom: 10px;
 	margin-top: 4px;
+	color: white;
 }
 
 .upcoming-meetings-section {
 	font-size: 16px;
 	margin-bottom: 10px;
 	margin-top: 4px;
+	color: #E7E7E7;;
 }
 
 .next-meeting-location, .upcoming-meeting-location {
@@ -239,15 +241,17 @@ p {
 .meeting-h1 {
 	font-size: 22px;
 	letter-spacing: 2px;
+	color: rgb(47, 100, 210);
 }
 
 .meeting-h2 {
 	font-size: 18px;
 	letter-spacing: 2px;
+	color: rgb(47, 100, 210);
 }
 
 .meeting-info {
-	color: #E4E4E4;
+	color: #E7E7E7;
 	padding-bottom: 5px;
 }
 
@@ -259,7 +263,6 @@ p {
 
 .upcoming-meeting-time-start, .upcoming-meeting-time-end {
 	font-size: 18px;
-	color: #F4F4F4;
 }
 
 .maga-logo {
