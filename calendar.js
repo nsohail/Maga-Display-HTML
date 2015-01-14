@@ -92,9 +92,9 @@ function makeApiCall() {
 
           
           //console.log(upcomingTimeStart[x]);
-          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-start">'+upcomingStartFormat[x]+'</div>');
+          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-start">'+upcomingStartFormat+'</div>');
           //console.log(upcomingTimeEnd[x]);
-          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-end">'+upcomingEndFormat[x]+'</div>');
+          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-end">'+upcomingEndFormat+'</div>');
         }
           //console.log(upcomingTitle);
           $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-title">'+upcomingTitle+'</div>');
