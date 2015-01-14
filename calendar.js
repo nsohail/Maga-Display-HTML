@@ -83,7 +83,7 @@ function makeApiCall() {
           console.log(upcomingItems);
           var dateX = upcomingTime[x];
           var format = new Date(Date.parse(dateX));
-          console.log(newOne);
+          console.log(format);
           
 
           //console.log(upcomingTime[x]);
