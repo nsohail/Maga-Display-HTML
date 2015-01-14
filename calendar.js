@@ -56,13 +56,16 @@ function makeApiCall() {
       //for the next meeting section
       var nextMeeting = entries[0];
       //console.log(nextMeeting);
-      var nextMeetingTime = nextMeeting.start;
+      var nextMeetingTimeStart = nextMeeting.start;
+      var nextMeetingTimeEnd = nextMeeting.end;
       var nextMeetingTitle = nextMeeting.summary;
       var nextMeetingLocation = nextMeeting.location;
       //console.log("This is the next meeting");
-      for (var x in nextMeetingTime) {
-        //console.log(nextMeetingTime[x]);
-        $('.next-meetings-section').find('.next-meeting-time').html(nextMeetingTime[x]);
+      for (var x in nextMeetingTimeStart && nextMeetingTimeEnd) {
+        //console.log(nextMeetingTimeStart[x]);
+        //console.log(nextMeetingTimeEnd[x]);
+        $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingTimeStart[x]);
+        $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingTimeEnd[x]);
       }
       //console.log(nextMeetingTitle);
       $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
@@ -75,19 +78,21 @@ function makeApiCall() {
       //console.log("These are the upcoming meetings");
       for (var i = 1; i < 3; i++) {
         var upcomingItems = entries[i];
-        var upcomingTime = upcomingItems.start;
+        var upcomingTimeStart = upcomingItems.start;
+        var upcomingTimeEnd = upcomingItems.end;
         var upcomingTitle = upcomingItems.summary;
         var upcomingLocation = upcomingItems.location;
         
-        for(x in upcomingTime){
+        for(x in upcomingTimeStart && upcomingTimeEnd){
           console.log(upcomingItems);
-          var dateX = upcomingTime[x];
-          var format = new Date(Date.parse(dateX));
-          console.log(format);
+          // var dateX = upcomingTime[x];
+          // var format = new Date(Date.parse(dateX));
+          // console.log(format);
           
-
-          //console.log(upcomingTime[x]);
-          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time">'+upcomingTime[x]+'</div>');
+          console.log(upcomingTimeStart[x]);
+          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-start">'+upcomingTimeStart[x]+'</div>');
+          console.log(upcomingTimeEnd[x]);
+          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-end">'+upcomingTimeEnd[x]+'</div>');
         }
           //console.log(upcomingTitle);
           $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-title">'+upcomingTitle+'</div>');
