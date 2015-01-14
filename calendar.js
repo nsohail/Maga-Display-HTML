@@ -90,6 +90,8 @@ function makeApiCall() {
           var upcomingStartFormat = new Date(Date.parse(upcomingStart));
           var upcomingEndFormat = new Date(upcomingEnd).toShortDateString();
 
+          console.log(upcomingStartFormat);
+          console.log(upcomingEndFormat);
           
           //console.log(upcomingTimeStart[x]);
           $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-start">'+upcomingStartFormat+'</div>');
