@@ -197,7 +197,7 @@ p {
 }
 
 .event {
-	overflow: overlay;
+	overflow: visible;
 	padding-top: 15px;
 	font-family: flexo-regular;
 }
@@ -205,7 +205,7 @@ p {
 
 .meetings-section {
 	font-family: flexo-regular;
-	padding: 16px;
+	padding: 28px;
 	margin-bottom: 10px;
 	margin-top: 4px;
 }
