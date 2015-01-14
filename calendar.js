@@ -85,14 +85,16 @@ function makeApiCall() {
         
         for(x in upcomingTimeStart && upcomingTimeEnd){
           console.log(upcomingItems);
-          // var dateX = upcomingTime[x];
-          // var format = new Date(Date.parse(dateX));
-          // console.log(format);
+          var upcomingStart = upcomingTimeStart[x];
+          var upcomingEnd = upcomingTimeEnd[x];
+          var upcomingStartFormat = new Date(Date.parse(upcomingStart));
+          var upcomingEndFormat = new Date(Date.parse(upcomingEnd));
+
           
-          console.log(upcomingTimeStart[x]);
-          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-start">'+upcomingTimeStart[x]+'</div>');
-          console.log(upcomingTimeEnd[x]);
-          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-end">'+upcomingTimeEnd[x]+'</div>');
+          //console.log(upcomingTimeStart[x]);
+          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-start">'+upcomingStartFormat[x]+'</div>');
+          //console.log(upcomingTimeEnd[x]);
+          $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-time-end">'+upcomingEndFormat[x]+'</div>');
         }
           //console.log(upcomingTitle);
           $('.upcoming-meetings-section').append('<div class="meeting-info next-meeting-title">'+upcomingTitle+'</div>');
