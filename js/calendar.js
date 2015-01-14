@@ -88,7 +88,7 @@ function makeApiCall() {
           var upcomingStart = upcomingTimeStart[x];
           var upcomingEnd = upcomingTimeEnd[x];
           var upcomingStartFormat = new Date(upcomingStart).toShortDateString();
-          var upcomingEndFormat = new Date(upcomingEnd).toShortTimeString('HH:mm');
+          var upcomingEndFormat = new Date(upcomingEnd).toString('HH:mm');
           console.log("this is the start " + upcomingStartFormat);
           console.log("this is the end " + upcomingEndFormat);
           
