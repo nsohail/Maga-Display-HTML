@@ -110,9 +110,17 @@ function makeApiCall() {
     });
   });
 
-  // window.setTimeout (function(){
-  //   makeApiCall();
-  // }, 10*1000);
+  window.setTimeout (function(){
+    $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
+    $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
+    $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
+    $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
+
+    $('.upcoming-meetings-section').find('.upcoming-meeting-time-start').html(nextMeetingStartFormat+'-');
+    $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(nextMeetingEndFormat);
+    $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(nextMeetingTitle);
+    $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(nextMeetingLocation);
+  }, 10*1000);
 
 }
 
