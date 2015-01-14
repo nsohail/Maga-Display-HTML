@@ -227,6 +227,14 @@ p {
 	margin-bottom: 22px
 }
 
+.next-meeting-start {
+	float: left;
+}
+
+.next-meeting-end {
+	clear: both;
+}
+
 .meeting-h1 {
 	font-size: 20px;
 	letter-spacing: 2px;
