@@ -177,7 +177,7 @@ p {
 }
 
 .announcements {
-	border-bottom: 1px solid;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.34);
 }
 
 .highlight {
