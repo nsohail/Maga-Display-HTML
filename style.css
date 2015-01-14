@@ -223,7 +223,7 @@ p {
 	margin-top: 4px;
 }
 
-.next-meeting-location {
+.next-meeting-location, .upcoming-meeting-location {
 	margin-bottom: 22px
 }
 

@@ -67,7 +67,7 @@ function makeApiCall() {
         var nextMeetingEnd = nextMeetingTimeEnd[x];
         var nextMeetingStartFormat = new Date(nextMeetingStart).toString('hh:mm tt');
         var nextMeetingEndFormat = new Date(nextMeetingEnd).toString('hh:mm tt');
-        $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat + '-');
+        $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
         $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
       }
 
@@ -91,7 +91,7 @@ function makeApiCall() {
           var upcomingStartFormat = new Date(upcomingStart).toString('hh:mm tt');
           var upcomingEndFormat = new Date(upcomingEnd).toString('hh:mm tt');
           
-          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-start">'+upcomingStartFormat+' -</div>');
+          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-start">'+upcomingStartFormat+'-</div>');
           $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-end">'+upcomingEndFormat+'</div>');
         }
 
