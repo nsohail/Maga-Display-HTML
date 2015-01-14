@@ -37,11 +37,13 @@ function handleAuthClick(event) {
 function makeApiCall() {
   // Step 4: Load the Google calendar API
   gapi.client.load('calendar', 'v3').then(function() {
+    var currentDate = new Date();
     // Step 5: Assemble the API request
     var request = gapi.client.calendar.events.list({
       'calendarId': 'magadesign.com_3337343339303832393534@resource.calendar.google.com',
-      "timeMin": "2014-07-31T00:00:00+01:00",
-      "timeMax": "2015-01-05T00:00:00+01:00"
+      "timeMin": currentDate,
+      
+      'singleEvents': true
     });
     // Step 6: Execute the API request
     request.then(function(callbackResponse) {
