@@ -197,7 +197,7 @@ p {
 }
 
 .event {
-	overflow: visible;
+	clear: both;
 	padding-top: 15px;
 	font-family: flexo-regular;
 }
