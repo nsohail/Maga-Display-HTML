@@ -231,6 +231,14 @@ p {
 	float: left;
 }
 
+.next-meeting-time-start, .next-meeting-time-end {
+	font-size: 20px;
+}
+
+.upcoming-meeting-time-start, .upcoming-meeting-time-end {
+	font-size: 18px;
+}
+
 .next-meeting-title, .upcoming-meeting-title {
 	clear: both;
 }
