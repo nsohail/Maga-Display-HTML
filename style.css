@@ -233,10 +233,12 @@ p {
 
 .next-meeting-time-start, .next-meeting-time-end {
 	font-size: 20px;
+	color: #F4F4F4;
 }
 
 .upcoming-meeting-time-start, .upcoming-meeting-time-end {
 	font-size: 18px;
+	color: #F4F4F4;
 }
 
 .next-meeting-title, .upcoming-meeting-title {
