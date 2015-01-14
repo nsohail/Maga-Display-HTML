@@ -218,7 +218,7 @@ p {
 }
 
 .upcoming-meetings-section {
-	font-size: 16px;
+	font-size: 15px;
 	margin-bottom: 10px;
 	margin-top: 4px;
 	color: #E7E7E7;;
@@ -231,7 +231,6 @@ p {
 .next-meeting-time-start, .upcoming-meeting-time-start, .next-meeting-time-end, .upcoming-meeting-time-end {
 	float: left;
 }
-
 
 
 .next-meeting-title, .upcoming-meeting-title {
@@ -251,7 +250,6 @@ p {
 }
 
 .meeting-info {
-	color: #E7E7E7;
 	padding-bottom: 5px;
 }
 
