@@ -120,7 +120,7 @@ function makeApiCall() {
     $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(nextMeetingEndFormat);
     $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(nextMeetingTitle);
     $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(nextMeetingLocation);
-  }, 10*1000);
+  }, 100*1000); //10 seconds
 
 }
 
