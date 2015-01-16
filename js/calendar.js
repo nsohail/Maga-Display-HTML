@@ -75,7 +75,6 @@ function makeApiCall() {
       var nextMeetingTimeEnd = nextMeeting.end;
       var nextMeetingTitle = nextMeeting.summary;
       var nextMeetingLocation = nextMeeting.location;
-      console.log($('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle));
 
       //console.log("This is the next meeting");
       for (var x in nextMeetingTimeStart && nextMeetingTimeEnd) {
