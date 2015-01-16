@@ -111,6 +111,7 @@ function makeApiCall() {
   });
 
   window.setTimeout (function(){
+    console.log("this is the timeout");
     $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
     $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
     $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
