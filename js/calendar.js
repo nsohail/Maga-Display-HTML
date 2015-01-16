@@ -38,6 +38,16 @@ function handleAuthClick(event) {
 function makeApiCall() {
   // Step 4: Load the Google calendar API
   gapi.client.load('calendar', 'v3').then(function() {
+
+    var nextMeetingStartFormat;
+    var nextMeetingEndFormat;
+    var nextMeetingTitle;
+    var nextMeetingLocation;
+    var upcomingStartFormat;
+    var upcomingEndFormat;
+    var upcomingTitle;
+    var upcomingLocation;
+
     var currentDate = new Date();
     // Step 5: Assemble the API request
     var start_date = new Date();
@@ -64,15 +74,15 @@ function makeApiCall() {
       //console.log(nextMeeting);
       var nextMeetingTimeStart = nextMeeting.start;
       var nextMeetingTimeEnd = nextMeeting.end;
-      var nextMeetingTitle = nextMeeting.summary;
-      var nextMeetingLocation = nextMeeting.location;
+      nextMeetingTitle = nextMeeting.summary;
+      nextMeetingLocation = nextMeeting.location;
 
       //console.log("This is the next meeting");
       for (var x in nextMeetingTimeStart && nextMeetingTimeEnd) {
         var nextMeetingStart = nextMeetingTimeStart[x];
         var nextMeetingEnd = nextMeetingTimeEnd[x];
-        var nextMeetingStartFormat = new Date(nextMeetingStart).toString('hh:mm tt');
-        var nextMeetingEndFormat = new Date(nextMeetingEnd).toString('hh:mm tt');
+        nextMeetingStartFormat = new Date(nextMeetingStart).toString('hh:mm tt');
+        nextMeetingEndFormat = new Date(nextMeetingEnd).toString('hh:mm tt');
         $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
         $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
       }
@@ -88,14 +98,14 @@ function makeApiCall() {
         var upcomingItems = entries[i];
         var upcomingTimeStart = upcomingItems.start;
         var upcomingTimeEnd = upcomingItems.end;
-        var upcomingTitle = upcomingItems.summary;
-        var upcomingLocation = upcomingItems.location;
+        upcomingTitle = upcomingItems.summary;
+        upcomingLocation = upcomingItems.location;
         
         for(x in upcomingTimeStart && upcomingTimeEnd){
           var upcomingStart = upcomingTimeStart[x];
           var upcomingEnd = upcomingTimeEnd[x];
-          var upcomingStartFormat = new Date(upcomingStart).toString('hh:mm tt');
-          var upcomingEndFormat = new Date(upcomingEnd).toString('hh:mm tt');
+          upcomingStartFormat = new Date(upcomingStart).toString('hh:mm tt');
+          upcomingEndFormat = new Date(upcomingEnd).toString('hh:mm tt');
           
           $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-start">'+upcomingStartFormat+'-</div>');
           $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-end">'+upcomingEndFormat+'</div>');
@@ -105,26 +115,23 @@ function makeApiCall() {
           $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-location">'+upcomingLocation+'</div>');
       }
 
-      window.setTimeout (function(){
+    }, function(errorReason) {
+      console.log('Error: ' + errorReason.result.error.message);
+    });
+
+  
+    window.setTimeout (function(){
       console.log("this is the timeout");
       $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
       $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
       $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
       $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
 
-      $('.upcoming-meetings-section').find('.upcoming-meeting-time-start').html(nextMeetingStartFormat+'-');
-      $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(nextMeetingEndFormat);
-      $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(nextMeetingTitle);
-      $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(nextMeetingLocation);
+      $('.upcoming-meetings-section').find('.upcoming-meeting-time-start').html(upcomingStartFormat+'-');
+      $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(upcomingEndFormat);
+      $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle);
+      $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(upcomingLocation);
     }, 100*1000); //10 seconds
-
-      
-       
-
-    }, function(errorReason) {
-      console.log('Error: ' + errorReason.result.error.message);
-    });
-
 
   }); //client load ends here
 }
