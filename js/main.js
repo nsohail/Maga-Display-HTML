@@ -69,18 +69,18 @@ $(document).ready(function () {
 
 
 	$.simpleWeather({
-	    location: 'Washington, DC',
-	    woeid: '',
-	    unit: 'f',
-	    success: function(weather) {
-		    console.log(weather);
-		    var html = weather.temp+'&deg;'+weather.units.temp;
-		    $(".current-weather").html(html);
-	    },
-	    error: function(error) {
-	      $(".current-weather").html('<p>'+error+'</p>');
-	    }
-  	});
+		location: 'Washington, DC',
+		woeid: '',
+		unit: 'f',
+		success: function(weather) {
+			console.log(weather);
+			var html = weather.temp+'&deg;'+weather.units.temp;
+			$(".current-weather").html(html);
+		},
+		error: function(error) {
+		  $(".current-weather").html('<p>'+error+'</p>');
+		}
+	});
 	
-});	
+});
 	

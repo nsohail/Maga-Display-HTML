@@ -104,14 +104,8 @@ function makeApiCall() {
           $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-title">'+upcomingTitle+'</div>');
           $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-location">'+upcomingLocation+'</div>');
       }
-       
 
-    }, function(errorReason) {
-      console.log('Error: ' + errorReason.result.error.message);
-    });
-
-
-    window.setTimeout (function(){
+      window.setTimeout (function(){
       console.log("this is the timeout");
       $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
       $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
@@ -123,6 +117,14 @@ function makeApiCall() {
       $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(nextMeetingTitle);
       $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(nextMeetingLocation);
     }, 100*1000); //10 seconds
+
+      
+       
+
+    }, function(errorReason) {
+      console.log('Error: ' + errorReason.result.error.message);
+    });
+
 
   }); //client load ends here
 }
