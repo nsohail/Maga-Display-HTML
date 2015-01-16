@@ -38,10 +38,10 @@ function handleAuthClick(event) {
 function makeApiCall() {
   // Step 4: Load the Google calendar API
   gapi.client.load('calendar', 'v3').then(function() {
-    // var nextMeetingStartFormat;
-    // var nextMeetingEndFormat;
-    // var nextMeetingTitle;
-    // var nextMeetingLocation;
+    var nextMeetingStartFormat;
+    var nextMeetingEndFormat;
+    var nextMeetingTitle;
+    var nextMeetingLocation;
     // var upcomingStartFormat;
     // var upcomingEndFormat;
     // var upcomingTitle;
@@ -73,15 +73,15 @@ function makeApiCall() {
       //console.log(nextMeeting);
       var nextMeetingTimeStart = nextMeeting.start;
       var nextMeetingTimeEnd = nextMeeting.end;
-      var nextMeetingTitle = nextMeeting.summary;
-      var nextMeetingLocation = nextMeeting.location;
+      nextMeetingTitle = nextMeeting.summary;
+      nextMeetingLocation = nextMeeting.location;
 
       //console.log("This is the next meeting");
       for (var x in nextMeetingTimeStart && nextMeetingTimeEnd) {
         var nextMeetingStart = nextMeetingTimeStart[x];
         var nextMeetingEnd = nextMeetingTimeEnd[x];
-        var nextMeetingStartFormat = new Date(nextMeetingStart).toString('hh:mm tt');
-        var nextMeetingEndFormat = new Date(nextMeetingEnd).toString('hh:mm tt');
+        nextMeetingStartFormat = new Date(nextMeetingStart).toString('hh:mm tt');
+        nextMeetingEndFormat = new Date(nextMeetingEnd).toString('hh:mm tt');
         $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
         $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
       }
@@ -134,7 +134,7 @@ function makeApiCall() {
     $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle);
     console.log($('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle));
     $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(upcomingLocation);
-  }, 100*1000); //10 seconds
+  }, 10*1000); //10 seconds
 
 }
 
