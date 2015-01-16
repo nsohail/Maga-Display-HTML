@@ -1,3 +1,4 @@
+//Step 1: set these items
 var clientId = '727304281402-2r6jn1l2jutllr07nc5ngba9omfqjand.apps.googleusercontent.com';
 
 var apiKey = 'AIzaSyDk7clYywa4fx8t6lYOs4C20GfxK6MAQEE';
@@ -123,11 +124,7 @@ function makeApiCall() {
       $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(nextMeetingLocation);
     }, 100*1000); //10 seconds
 
-
-  });
-
-
-
+  }); //client load ends here
 }
 
 
