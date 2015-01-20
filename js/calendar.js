@@ -38,6 +38,14 @@ function handleAuthClick(event) {
 function makeApiCall() {
   // Step 4: Load the Google calendar API
   gapi.client.load('calendar', 'v3').then(function() {
+    // var nextMeetingStartFormat;
+    // var nextMeetingEndFormat;
+    // var nextMeetingTitle;
+    // var nextMeetingLocation;
+    // var upcomingStartFormat;
+    // var upcomingEndFormat;
+    // var upcomingTitle;
+    // var upcomingLocation;
 
     var currentDate = new Date();
     // Step 5: Assemble the API request
@@ -80,6 +88,21 @@ function makeApiCall() {
 
       $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
       $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
+
+      // window.setTimeout (function(){
+      //   console.log("this is the timeout");
+      //   $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
+      //   $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
+      //   $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
+      //   console.log($('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle));
+      //   $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
+
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-time-start').html(upcomingStartFormat+'-');
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(upcomingEndFormat);
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle);
+      //   console.log($('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle));
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(upcomingLocation);
+      // }, 10*1000); //10 seconds
     
       
 
@@ -100,25 +123,37 @@ function makeApiCall() {
           var upcomingStartFormat = new Date(upcomingStart).toString('hh:mm tt');
           var upcomingEndFormat = new Date(upcomingEnd).toString('hh:mm tt');
           
-          $('.upcoming-meetings-section').find('.upcoming-meeting-time-start').html(upcomingStartFormat);
-          $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(upcomingEndFormat);
+          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-start">'+upcomingStartFormat+'-</div>');
+          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-end">'+upcomingEndFormat+'</div>');
         }
 
-          $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle);
-          $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(upcomingLocation);
+          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-title">'+upcomingTitle+'</div>');
+          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-location">'+upcomingLocation+'</div>');
       }
+
+
+      // window.setTimeout (function(){
+      //   console.log("this is the timeout");
+      //   $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
+      //   $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
+      //   $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
+      //   console.log($('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle));
+      //   $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
+
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-time-start').html(upcomingStartFormat+'-');
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(upcomingEndFormat);
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle);
+      //   console.log($('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle));
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(upcomingLocation);
+      // }, 10*1000); //10 seconds
+
 
     }, function(errorReason) {
       console.log('Error: ' + errorReason.result.error.message);
     });
 
   }); //client load ends here
-
-  window.setTimeout (function(){
-    console.log("this is the timeout");
-    makeApiCall();
-  }, 10*1000); //10 seconds
-
    
+
 }//makeApiCall ends here
 
