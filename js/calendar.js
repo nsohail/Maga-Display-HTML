@@ -99,6 +99,8 @@ function makeApiCall() {
         var upcomingTimeEnd = upcomingItems.end;
         var upcomingTitle = upcomingItems.summary;
         var upcomingLocation = upcomingItems.location;
+
+        console.log(upcomingTimeStart);
         
         for(x in upcomingTimeStart && upcomingTimeEnd){
           var upcomingStart = upcomingTimeStart[x];
@@ -117,20 +119,20 @@ function makeApiCall() {
 
       //console.log(nextMeetingTitle);
 
-      window.setTimeout (function(){
-        console.log("this is the timeout");
-        $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
-        $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
-        $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
-        console.log($('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle));
-        $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
+      // window.setTimeout (function(){
+      //   console.log("this is the timeout");
+      //   $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
+      //   $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
+      //   $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
+      //   console.log($('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle));
+      //   $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
 
-        $('.upcoming-meetings-section').find('.upcoming-meeting-time-start').html(upcomingStartFormat+'-');
-        $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(upcomingEndFormat);
-        $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle);
-        console.log($('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle));
-        $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(upcomingLocation);
-      }, 10*1000); //10 seconds
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-time-start').html(upcomingStartFormat+'-');
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(upcomingEndFormat);
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle);
+      //   console.log($('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle));
+      //   $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(upcomingLocation);
+      // }, 10*1000); //10 seconds
 
 
     }, function(errorReason) {
