@@ -38,14 +38,6 @@ function handleAuthClick(event) {
 function makeApiCall() {
   // Step 4: Load the Google calendar API
   gapi.client.load('calendar', 'v3').then(function() {
-    // var nextMeetingStartFormat;
-    // var nextMeetingEndFormat;
-    // var nextMeetingTitle;
-    // var nextMeetingLocation;
-    // var upcomingStartFormat;
-    // var upcomingEndFormat;
-    // var upcomingTitle;
-    // var upcomingLocation;
 
     var currentDate = new Date();
     // Step 5: Assemble the API request
@@ -68,77 +60,75 @@ function makeApiCall() {
       }
 
 
-      //for the next meeting section
+      //get meeting info
       var nextMeeting = entries[0];
-      //console.log(nextMeeting);
       var nextMeetingTimeStart = nextMeeting.start;
       var nextMeetingTimeEnd = nextMeeting.end;
       var nextMeetingTitle = nextMeeting.summary;
       var nextMeetingLocation = nextMeeting.location;
 
-      //console.log("This is the next meeting");
-      for (var x in nextMeetingTimeStart && nextMeetingTimeEnd) {
+      var secondMeeting = entries[1];
+      var secondMeetingTimeStart = secondMeeting.start;
+      var secondMeetingTimeEnd = secondMeeting.end;
+      var secondMeetingTitle = secondMeeting.summary;
+      var secondMeetingLocation = secondMeeting.location;
+
+      var thirdMeeting = entries[2];
+      var thirdMeetingTimeStart = thirdMeeting.start;
+      var thirdMeetingTimeEnd = thirdMeeting.end;
+      var thirdMeetingTitle = thirdMeeting.summary;
+      var thirdMeetingLocation = thirdMeeting.location;
+
+
+      //formatting info
+      for (var x in nextMeetingTimeStart && nextMeetingTimeEnd && secondMeetingTimeStart && secondMeetingTimeEnd && thirdMeetingTimeStart && thirdMeetingTimeEnd) {
         var nextMeetingStart = nextMeetingTimeStart[x];
         var nextMeetingEnd = nextMeetingTimeEnd[x];
+
+        var secondMeetingStart = secondMeetingTimeStart[x];
+        var secondMeetingEnd = secondMeetingTimeEnd[x];
+
+        var thirdMeetingStart = thirdMeetingTimeStart[x];
+        var thirdMeetingEnd = thirdMeetingTimeEnd[x];
+
         var nextMeetingStartFormat = new Date(nextMeetingStart).toString('hh:mm tt');
         var nextMeetingEndFormat = new Date(nextMeetingEnd).toString('hh:mm tt');
+
+        var secondMeetingStartFormat = new Date(secondMeetingStart).toString('hh:mm tt');
+        var secondMeetingEndFormat = new Date(secondMeetingEnd).toString('hh:mm tt');
+
+        var thirdMeetingStartFormat = new Date(thirdMeetingStart).toString('hh:mm tt');
+        var thirdMeetingEndFormat = new Date(thirdMeetingEnd).toString('hh:mm tt');
         $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
         $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
+
+        $('.upcoming-meetings-section').find('.second-meeting-time-start').html(secondMeetingStartFormat+'-');
+        $('.upcoming-meetings-section').find('.second-meeting-time-end').html(secondMeetingEndFormat);
+
+        $('.upcoming-meetings-section').find('.third-meeting-time-start').html(thirdMeetingStartFormat+'-');
+        $('.upcoming-meetings-section').find('.third-meeting-time-end').html(thirdMeetingEndFormat);
       }
 
       $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
       $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
+
+      $('.upcoming-meetings-section').find('.second-meeting-title').html(secondMeetingTitle);
+      $('.upcoming-meetings-section').find('.second-meeting-location').html(secondMeetingLocation);
+
+      $('.upcoming-meetings-section').find('.third-meeting-title').html(thirdMeetingTitle);
+      $('.upcoming-meetings-section').find('.third-meeting-location').html(thirdMeetingLocation);
     
-      
-
-      //for upcoming meetings
-      //console.log("These are the upcoming meetings");
-      for (var i = 1; i < 3; i++) {
-        var upcomingItems = entries[i];
-        var upcomingTimeStart = upcomingItems.start;
-        var upcomingTimeEnd = upcomingItems.end;
-        var upcomingTitle = upcomingItems.summary;
-        var upcomingLocation = upcomingItems.location;
-
-        console.log(upcomingTimeStart);
-        
-        for(x in upcomingTimeStart && upcomingTimeEnd){
-          var upcomingStart = upcomingTimeStart[x];
-          var upcomingEnd = upcomingTimeEnd[x];
-          var upcomingStartFormat = new Date(upcomingStart).toString('hh:mm tt');
-          var upcomingEndFormat = new Date(upcomingEnd).toString('hh:mm tt');
-          
-          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-start">'+upcomingStartFormat+'-</div>');
-          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-end">'+upcomingEndFormat+'</div>');
-        }
-
-          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-title">'+upcomingTitle+'</div>');
-          $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-location">'+upcomingLocation+'</div>');
-      }
-
-
-      // window.setTimeout (function(){
-      //   console.log("this is the timeout");
-      //   $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
-      //   $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
-      //   $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
-      //   console.log($('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle));
-      //   $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
-
-      //   $('.upcoming-meetings-section').find('.upcoming-meeting-time-start').html(upcomingStartFormat+'-');
-      //   $('.upcoming-meetings-section').find('.upcoming-meeting-time-end').html(upcomingEndFormat);
-      //   $('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle);
-      //   console.log($('.upcoming-meetings-section').find('.upcoming-meeting-title').html(upcomingTitle));
-      //   $('.upcoming-meetings-section').find('.upcoming-meeting-location').html(upcomingLocation);
-      // }, 10*1000); //10 seconds
-
-
+    
     }, function(errorReason) {
       console.log('Error: ' + errorReason.result.error.message);
     });
 
   }); //client load ends here
-   
+
+  window.setTimeout (function(){
+    console.log("this is the timeout");
+    makeApiCall();
+  }, 10*1000); //10 seconds
 
 }//makeApiCall ends here
 
