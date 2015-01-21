@@ -153,7 +153,7 @@ function makeApiCall() {
   window.setTimeout (function(){
     console.log("this is the timeout");
     makeApiCall();
-  }, 10*1000); //10 seconds
+  }, 600*1000); //10 seconds
 
 }//makeApiCall ends here
 
