@@ -118,7 +118,32 @@ function makeApiCall() {
       $('.upcoming-meetings-section').find('.third-meeting-title').html(thirdMeetingTitle);
       $('.upcoming-meetings-section').find('.third-meeting-location').html(thirdMeetingLocation);
     
-    
+
+      // //for upcoming meetings
+      // //console.log("These are the upcoming meetings");
+      // for (var i = 1; i < 3; i++) {
+      //   var upcomingItems = entries[i];
+      //   var upcomingTimeStart = upcomingItems.start;
+      //   var upcomingTimeEnd = upcomingItems.end;
+      //   var upcomingTitle = upcomingItems.summary;
+      //   var upcomingLocation = upcomingItems.location;
+
+        
+      //   for(x in upcomingTimeStart && upcomingTimeEnd){
+      //     var upcomingStart = upcomingTimeStart[x];
+      //     var upcomingEnd = upcomingTimeEnd[x];
+      //     var upcomingStartFormat = new Date(upcomingStart).toString('hh:mm tt');
+      //     var upcomingEndFormat = new Date(upcomingEnd).toString('hh:mm tt');
+      //     $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-start">'+upcomingStartFormat+'-</div>');
+      //     $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-time-end">'+upcomingEndFormat+'</div>');
+      //   }
+
+      //     $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-title">'+upcomingTitle+'</div>');
+      //     $('.upcoming-meetings-section').append('<div class="meeting-info upcoming-meeting-location">'+upcomingLocation+'</div>');
+      // }
+
+
+
     }, function(errorReason) {
       console.log('Error: ' + errorReason.result.error.message);
     });
