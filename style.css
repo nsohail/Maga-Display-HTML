@@ -100,17 +100,17 @@ p {
 }
 
 .today {
-	background-image: url('calendar.png');
+	background-image: url('images/calendar.png');
 	background-repeat: no-repeat;
 }
 
 .weather {
-	background-image: url('weather.png');
+	background-image: url('images/weather.png');
 	background-repeat: no-repeat;
 }
 
 .meetings {
-	background-image: url('meetings.png');
+	background-image: url('images/meetings.png');
 	background-repeat: no-repeat;
 }
 
@@ -119,15 +119,15 @@ p {
 }
 
 .offsite {
-	background-image: url('offsite-events.png');
+	background-image: url('images/offsite-events.png');
 }
 
 .client {
-	background-image: url('client-facing.png');
+	background-image: url('images/client-facing.png');
 }
 
 .culture {
-	background-image: url('maga-culture.png');
+	background-image: url('images/maga-culture.png');
 }
 
 .current-time {
@@ -264,7 +264,7 @@ p {
 
 
 .maga-logo {
-	background-image: url('maga-logo.png');
+	background-image: url('images/maga-logo.png');
 	background-repeat: no-repeat;
 	background-position: 100% 100%;
 	background-size: 30px;
