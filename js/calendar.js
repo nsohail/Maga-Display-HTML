@@ -36,6 +36,7 @@ function handleAuthClick(event) {
 
 // Load the API and make an API call.  Display the results on the screen.
 function makeApiCall() {
+  console.log("running API call");
   // Step 4: Load the Google calendar API
   gapi.client.load('calendar', 'v3').then(function() {
 
@@ -148,13 +149,12 @@ function makeApiCall() {
       console.log('Error: ' + errorReason.result.error.message);
     });
 
-    window.setTimeout (function(){
-      console.log("this is the timeout");
-      makeApiCall();
-    }, 300*1000); //5 minutes
-
-
   }); //client load ends here
+
+  window.setTimeout (function(){
+    console.log("this is the timeout");
+    makeApiCall();
+  }, 10*1000); //5 minutes
 
   
 }//makeApiCall ends here
