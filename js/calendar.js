@@ -100,24 +100,24 @@ function makeApiCall() {
 
         var thirdMeetingStartFormat = new Date(thirdMeetingStart).toString('hh:mm tt');
         var thirdMeetingEndFormat = new Date(thirdMeetingEnd).toString('hh:mm tt');
-        $('.next-meetings-section').find('.next-meeting-time-start').html(nextMeetingStartFormat+'-');
-        $('.next-meetings-section').find('.next-meeting-time-end').html(nextMeetingEndFormat);
+        $('.next-meetings-section').find('.next-meeting-time-start').text(nextMeetingStartFormat+'-');
+        $('.next-meetings-section').find('.next-meeting-time-end').text(nextMeetingEndFormat);
 
-        $('.upcoming-meetings-section').find('.second-meeting-time-start').html(secondMeetingStartFormat+'-');
-        $('.upcoming-meetings-section').find('.second-meeting-time-end').html(secondMeetingEndFormat);
+        $('.upcoming-meetings-section').find('.second-meeting-time-start').text(secondMeetingStartFormat+'-');
+        $('.upcoming-meetings-section').find('.second-meeting-time-end').text(secondMeetingEndFormat);
 
-        $('.upcoming-meetings-section').find('.third-meeting-time-start').html(thirdMeetingStartFormat+'-');
-        $('.upcoming-meetings-section').find('.third-meeting-time-end').html(thirdMeetingEndFormat);
+        $('.upcoming-meetings-section').find('.third-meeting-time-start').text(thirdMeetingStartFormat+'-');
+        $('.upcoming-meetings-section').find('.third-meeting-time-end').text(thirdMeetingEndFormat);
       }
 
-      $('.next-meetings-section').find('.next-meeting-title').html(nextMeetingTitle);
-      $('.next-meetings-section').find('.next-meeting-location').html(nextMeetingLocation);
+      $('.next-meetings-section').find('.next-meeting-title').text(nextMeetingTitle);
+      $('.next-meetings-section').find('.next-meeting-location').text(nextMeetingLocation);
 
-      $('.upcoming-meetings-section').find('.second-meeting-title').html(secondMeetingTitle);
-      $('.upcoming-meetings-section').find('.second-meeting-location').html(secondMeetingLocation);
+      $('.upcoming-meetings-section').find('.second-meeting-title').text(secondMeetingTitle);
+      $('.upcoming-meetings-section').find('.second-meeting-location').text(secondMeetingLocation);
 
-      $('.upcoming-meetings-section').find('.third-meeting-title').html(thirdMeetingTitle);
-      $('.upcoming-meetings-section').find('.third-meeting-location').html(thirdMeetingLocation);
+      $('.upcoming-meetings-section').find('.third-meeting-title').text(thirdMeetingTitle);
+      $('.upcoming-meetings-section').find('.third-meeting-location').text(thirdMeetingLocation);
     
 
       // //for upcoming meetings
