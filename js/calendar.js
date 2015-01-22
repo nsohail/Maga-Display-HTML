@@ -148,12 +148,14 @@ function makeApiCall() {
       console.log('Error: ' + errorReason.result.error.message);
     });
 
+    window.setTimeout (function(){
+      console.log("this is the timeout");
+      makeApiCall();
+    }, 300*1000); //5 minutes
+
+
   }); //client load ends here
 
-  window.setTimeout (function(){
-    console.log("this is the timeout");
-    makeApiCall();
-  }, 300*1000); //5 minutes
-
+  
 }//makeApiCall ends here
 
