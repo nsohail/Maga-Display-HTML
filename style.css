@@ -23,7 +23,7 @@ body {
 
 p {
 	color: #dddddd;
-	font-family: flexo-regular;
+	font-family: flexo-regular, sans-serif;
 	line-height: 24px;
 }
 
@@ -84,7 +84,7 @@ p {
 	text-align: left;
 	padding: 16px;
 	padding-bottom: 5px;
-	font-family: flexo-medium;
+	font-family: flexo-medium, sans-serif;
 	letter-spacing: 2px;
 }
 
@@ -134,7 +134,7 @@ p {
 	text-align: center;
 	font-size: 49px;
 	padding: 18px 10px 0 10px;
-	font-family: flexo-regular;
+	font-family: flexo-regular, sans-serif;
 	color: white;
 	letter-spacing: 2px;
 }
@@ -143,7 +143,7 @@ p {
 	text-align: center;
 	font-size: 24px;
 	padding: 0 5px 5px 5px;
-	font-family: flexo-regular;
+	font-family: flexo-regular, sans-serif;
 	color: white;
 	font-weight: 100;
 	letter-spacing: 1px;
@@ -153,7 +153,7 @@ p {
 	text-align: center;
 	font-size: 44px;
 	padding: 5px;
-	font-family: flexo-medium;
+	font-family: flexo-medium, sans-serif;
 	color: #002545;
 	/* font-weight: 100; */
 	letter-spacing: 2px;
@@ -163,17 +163,13 @@ p {
 	padding: 15px;
 	font-size: 24px;
 	padding-bottom: 30px;
-	font-family: flexo-medium;
+	font-family: flexo-medium, sans-serif;
 }
 
 
 .title-highlight {
-	font-family: flexo-medium;
+	font-family: flexo-medium, sans-serif;
 	letter-spacing: 2px;
-}
-
-.announcements, .events {
-	margin: 15px;
 }
 
 
@@ -182,15 +178,27 @@ p {
 	color: white;
 }
 
-.event-highlight {
-	color: white;
+
+.announcements {
+	padding: 14px;
+	font-family: flexo-regular, sans-serif;
+	font-weight: 100;
+}
+
+.announcement > .event-highlight-date {
+	color: rgb(221, 221, 221);
+	border-bottom: 1px rgb(170, 184, 193) solid;
+	padding-bottom: 6px;
+	margin-bottom: 6px;
+}
+
+.announcement {
+	margin-bottom: 30px;
 }
 
 
-
-
 .meetings-section {
-	font-family: flexo-regular;
+	font-family: flexo-regular, sans-serif;
 	padding: 28px;
 	margin-bottom: 10px;
 	margin-top: 4px;
