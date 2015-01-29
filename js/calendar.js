@@ -124,7 +124,7 @@ function makeApiCall() {
 
     }, function(errorReason) {
       location.reload();
-      console.log('Error: ' + errorReason.result.error.message);
+      console.log('There was a HUGE Error: ' + errorReason.result.error.message);
     });
 
   }); //client load ends here
