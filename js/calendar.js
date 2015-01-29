@@ -146,6 +146,7 @@ function makeApiCall() {
 
 
     }, function(errorReason) {
+      alert("There was an error");
       console.log('Error: ' + errorReason.result.error.message);
     });
 
@@ -154,7 +155,7 @@ function makeApiCall() {
   window.setTimeout (function(){
     console.log("this is the timeout");
     makeApiCall();
-  }, 5*60*1000); //5 minutes
+  }, 1*60*1000); //5 minutes
 
   
 }//makeApiCall ends here
