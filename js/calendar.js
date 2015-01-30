@@ -31,7 +31,7 @@ function handleAuthResult(authResult) {
 function handleAuthClick(event) {
   // Step 3: get authorization to use private data
   gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
-  return false;
+  return true;
 }
 
 // Load the API and make an API call.  Display the results on the screen.
