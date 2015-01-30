@@ -280,4 +280,5 @@ p {
 
 #authorize-button:hover{
 	background: rgb(14, 54, 76);
+	cursor: pointer;
 }
