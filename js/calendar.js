@@ -20,10 +20,11 @@ function checkAuth() {
 function handleAuthResult(authResult) {
   var authorizeButton = document.getElementById('authorize-button');
   if (authResult && !authResult.error) {    //if you are authorized with no errors, make the call
-    authorizeButton.style.visibility = 'hidden';
+    $('#authorize-button-logout').show();
+    $('#authorize-button').hide();
     makeApiCall();
   } else {  //if you are not authorized...
-    authorizeButton.style.visibility = 'visible';
+    $('#authorize-button').show();
     authorizeButton.onclick = handleAuthClick;
   }
 }
