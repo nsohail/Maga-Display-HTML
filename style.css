@@ -263,6 +263,7 @@ p {
 	background-position: 100% 100%;
 	background-size: 30px;
 	height: 50px;
+	padding-top: 4px;
 }
 
 #authorize-button {
