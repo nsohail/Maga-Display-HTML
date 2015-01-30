@@ -30,7 +30,7 @@ function handleAuthResult(authResult) {
 
 function handleAuthClick(event) {
   // Step 3: get authorization to use private data
-  gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
+  gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false, approvalprompt: force}, handleAuthResult);
   return false;
 }
 
