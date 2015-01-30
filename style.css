@@ -18,7 +18,7 @@ body {
 .container {
 	margin: 0 auto;
 	width: 100%;
-	height: 800px;
+	height: 1020px;
 }
 
 p {
@@ -29,7 +29,7 @@ p {
 
 .row {
 	width: 23.5%;
-	height: 800px;
+	height: 100%;
 	float: left;
 	margin-right: 2%;
 	position: relative;
@@ -58,23 +58,23 @@ p {
 }
 
 .sub-box {
-	margin-bottom: 18px;
+	margin-bottom: 4.5%;
 	position: relative;
 }
 
 .time-box {
 	background: rgba(234, 140, 44, 0.95);
-	height: 160px;
+	height: 18%;
 }
 
 .weather-box {
 	background: rgba(206, 212, 215, 0.95);
-	height: 100px;
+	height: 12%;
 }
 
 .meetings-box {
 	background: rgba(113, 177, 208, 0.95);
-	height: 504px;
+	height: 66%;
 	margin-bottom: 0;
 }
 
@@ -186,7 +186,7 @@ p {
 }
 
 .announcement > .event-highlight-date {
-	color: rgb(221, 221, 221);
+	color: rgb(180, 180, 180);
 	border-bottom: 1px rgba(255, 255, 255, 0.06) solid;
 	padding-bottom: 6px;
 	margin-bottom: 6px;
@@ -205,21 +205,22 @@ p {
 }
 
 .next-meetings-section {
-	font-size: 16px;
+	font-size: 18px;
 	margin-bottom: 10px;
 	margin-top: 4px;
 	color: white;
 }
 
 .upcoming-meetings-section {
-	font-size: 14px;
+	font-size: 16px;
 	margin-bottom: 10px;
 	margin-top: 4px;
 	color: #E7E7E7;
 }
 
 .next-meeting-location, .second-meeting-location, .third-meeting-location {
-	margin-bottom: 22px
+	margin-bottom: 22px;
+	line-height: 24px;
 }
 
 
@@ -240,7 +241,7 @@ p {
 }
 
 .meeting-info {
-	padding-bottom: 5px;
+	padding-bottom: 8px;
 }
 
 .meeting-time {
