@@ -206,14 +206,14 @@ p {
 }
 
 .next-meetings-section {
-	font-size: 16px;
+	font-size: 15px;
 	margin-bottom: 10px;
 	margin-top: 4px;
 	color: white;
 }
 
 .upcoming-meetings-section {
-	font-size: 14px;
+	font-size: 13px;
 	margin-bottom: 10px;
 	margin-top: 4px;
 	color: #E7E7E7;
@@ -221,7 +221,7 @@ p {
 
 .next-meeting-location, .second-meeting-location, .third-meeting-location {
 	margin-bottom: 22px;
-	line-height: 24px;
+	line-height: 23px;
 }
 
 
