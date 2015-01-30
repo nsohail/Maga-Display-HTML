@@ -281,12 +281,12 @@ p {
 	margin-right: 20px;
 }
 
-#authorize-button a {
+#authorize-button a, #authorize-button-logout a {
 	color: white;
 	text-decoration: none;
 }
 
-#authorize-button:hover{
+#authorize-button:hover, #authorize-button-logout:hover{
 	background: rgb(14, 54, 76);
 	cursor: pointer;
 }
