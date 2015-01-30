@@ -23,14 +23,14 @@ function handleAuthResult(authResult) {
     authorizeButton.style.visibility = 'hidden';
     makeApiCall();
   } else {  //if you are not authorized...
-    authorizeButton.style.visibility = '';
+    authorizeButton.style.visibility = 'visible';
     authorizeButton.onclick = handleAuthClick;
   }
 }
 
 function handleAuthClick(event) {
   // Step 3: get authorization to use private data
-  gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
+  gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
   return false;
 }
 
@@ -41,8 +41,9 @@ function makeApiCall() {
   gapi.client.load('calendar', 'v3').then(function() {
 
     var currentDate = new Date();
-    // Step 5: Assemble the API request
     var start_date = new Date();
+
+    // Step 5: Assemble the API request
     var request = gapi.client.calendar.events.list({
       'calendarId': 'magadesign.com_3337343339303832393534@resource.calendar.google.com',
       'orderBy': 'startTime',
