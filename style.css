@@ -18,8 +18,8 @@ body {
 .container {
 	margin: 0 auto;
 	width: 100%;
-	min-height: 800px;
-	height: 1020px;
+	min-height: 654px;
+	height: 800px;
 }
 
 p {
@@ -75,7 +75,7 @@ p {
 
 .meetings-box {
 	background: rgba(113, 177, 208, 0.95);
-	height: 66%;
+	height: 65%;
 	margin-bottom: 0;
 }
 
