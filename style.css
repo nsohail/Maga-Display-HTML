@@ -279,7 +279,6 @@ p {
 	text-align: center;
 	float: left;
 	margin-right: 20px;
-	visibility: visible;
 }
 
 #authorize-button a, #authorize-button-logout a {
@@ -288,10 +287,13 @@ p {
 }
 
 
-#authorize-button:hover, #authorize-button-logout:hover{
-	background: rgb(14, 54, 76);
-	cursor: pointer;
+#authorize-button-logout {
 	visibility: hidden;
 }
 
+#authorize-button:hover, #authorize-button-logout:hover{
+	background: rgb(14, 54, 76);
+	cursor: pointer;
+	visibility: visible;
+}
 
