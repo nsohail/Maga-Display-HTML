@@ -291,3 +291,12 @@ p {
 	background: rgb(14, 54, 76);
 	cursor: pointer;
 }
+
+
+#authorize-button-logout{
+	visibility: hidden;
+}
+
+#authorize-button-logout:hover{
+	visibility: visible;
+}
