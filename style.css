@@ -293,6 +293,6 @@ p {
 }
 
 
-#authorize-button-logout:hover{
+#authorize-button-logout:a hover{
 	visibility: hidden;
 }
