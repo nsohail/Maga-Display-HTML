@@ -264,7 +264,7 @@ p {
 	background-position: 100% 100%;
 	background-size: 30px;
 	height: 50px;
-	padding-top: 4px;
+	padding-top: 6px;
 }
 
 #authorize-button, #authorize-button-logout {
@@ -286,13 +286,6 @@ p {
 	text-decoration: none;
 }
 
-#authorize-button-logout a{
-	visibility: hidden;
-}
-
-#authorize-button-logout a:hover{
-	visibility: visible;
-}
 
 #authorize-button:hover, #authorize-button-logout:hover{
 	background: rgb(14, 54, 76);
