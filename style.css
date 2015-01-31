@@ -293,10 +293,6 @@ p {
 }
 
 
-#authorize-button-logout{
-	visibility: hidden;
-}
-
 #authorize-button-logout:hover{
-	visibility: visible;
+	visibility: hidden;
 }
