@@ -55,7 +55,7 @@ p {
 }
 
 .row {
-	width: 32%;
+	width: 30.3%;
 	height: 100%;
 	float: left;
 	margin-right: 2%;
@@ -74,16 +74,67 @@ p {
 
 .row3 {
 	background: rgba(8, 48, 78, 0.95);
+	margin-right: 0;
 }
 
-.row4 {
-	background: rgba(67, 110, 140, 0.95);
-	margin-right: 0;
+
+
+
+.metric {
+	height: 14px;
+	width: 250px;
+	border-radius: 10px;
+	border: 1px solid #e4e4e4;
+	position: relative;
+}
+
+.metric:after {
+	content:'\A';
+	background: #e4e4e4;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: 10px;
+}
+
+.metric1:after {
+	width: 100%;
+}
+
+.metric2:after {
+	width: 80%;
+}
+
+.metric3:after {
+	width: 70%;
+}
+
+.metric4:after {
+	width: 50%;
+}
+
+.metric5:after {
+	width: 30%;
+}
+
+.tracker {
+	margin-bottom: 40px;
+}
+
+.tracker > .tracker-title {
+	margin-bottom: 5px;
 }
 
 .sub-box {
 	margin-bottom: 3.4%;
 	position: relative;
+}
+
+.maga-box, .client-box {
+	background: rgba(67, 110, 140, 0.95);
+	height: 49.1%;
 }
 
 .time-box {
@@ -127,6 +178,11 @@ p {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+.projects {
+	background-image: url('images/projects.png');
+	background-repeat: no-repeat;
 }
 
 .today {
@@ -262,13 +318,13 @@ p {
 	color: #E7E7E7;
 }
 
-.next-meeting-location, .second-meeting-location, .third-meeting-location {
+.next-meeting-location, .second-meeting-location {
 	margin-bottom: 22px;
 	line-height: 22px;
 }
 
 
-.next-meeting-title, .second-meeting-title, .third-meeting-title {
+.next-meeting-title, .second-meeting-title {
 	clear: both;
 }
 
