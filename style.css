@@ -44,7 +44,7 @@ body {
 
 .wrapper {
 	height: 850px;
-	width: 3900px;
+	width: 4200px;
 }
 
 p {
@@ -114,6 +114,7 @@ p {
 	padding-bottom: 0px;
 	font-family: flexo-medium, sans-serif;
 	letter-spacing: 2px;
+	padding-bottom: 5px;
 }
 
 .corner-background {
