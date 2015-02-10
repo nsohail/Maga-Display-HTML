@@ -76,23 +76,14 @@ function makeApiCall() {
       var secondMeetingTitle = secondMeeting.summary;
       var secondMeetingLocation = secondMeeting.location;
 
-      var thirdMeeting = entries[2];
-      var thirdMeetingTimeStart = thirdMeeting.start;
-      var thirdMeetingTimeEnd = thirdMeeting.end;
-      var thirdMeetingTitle = thirdMeeting.summary;
-      var thirdMeetingLocation = thirdMeeting.location;
-
 
       //formatting info
-      for (var x in nextMeetingTimeStart && nextMeetingTimeEnd && secondMeetingTimeStart && secondMeetingTimeEnd && thirdMeetingTimeStart && thirdMeetingTimeEnd) {
+      for (var x in nextMeetingTimeStart && nextMeetingTimeEnd && secondMeetingTimeStart && secondMeetingTimeEnd {
         var nextMeetingStart = nextMeetingTimeStart[x];
         var nextMeetingEnd = nextMeetingTimeEnd[x];
 
         var secondMeetingStart = secondMeetingTimeStart[x];
         var secondMeetingEnd = secondMeetingTimeEnd[x];
-
-        var thirdMeetingStart = thirdMeetingTimeStart[x];
-        var thirdMeetingEnd = thirdMeetingTimeEnd[x];
 
         var nextMeetingStartFormat = new Date(nextMeetingStart).toString('hh:mm tt');
         var nextMeetingEndFormat = new Date(nextMeetingEnd).toString('hh:mm tt');
@@ -100,16 +91,11 @@ function makeApiCall() {
         var secondMeetingStartFormat = new Date(secondMeetingStart).toString('hh:mm tt');
         var secondMeetingEndFormat = new Date(secondMeetingEnd).toString('hh:mm tt');
 
-        var thirdMeetingStartFormat = new Date(thirdMeetingStart).toString('hh:mm tt');
-        var thirdMeetingEndFormat = new Date(thirdMeetingEnd).toString('hh:mm tt');
         $('.next-meetings-section').find('.next-meeting-time-start').text(nextMeetingStartFormat+'-');
         $('.next-meetings-section').find('.next-meeting-time-end').text(nextMeetingEndFormat);
 
         $('.upcoming-meetings-section').find('.second-meeting-time-start').text(secondMeetingStartFormat+'-');
         $('.upcoming-meetings-section').find('.second-meeting-time-end').text(secondMeetingEndFormat);
-
-        $('.upcoming-meetings-section').find('.third-meeting-time-start').text(thirdMeetingStartFormat+'-');
-        $('.upcoming-meetings-section').find('.third-meeting-time-end').text(thirdMeetingEndFormat);
       }
 
       $('.next-meetings-section').find('.next-meeting-title').text(nextMeetingTitle);
@@ -117,11 +103,6 @@ function makeApiCall() {
 
       $('.upcoming-meetings-section').find('.second-meeting-title').text(secondMeetingTitle);
       $('.upcoming-meetings-section').find('.second-meeting-location').text(secondMeetingLocation);
-
-      $('.upcoming-meetings-section').find('.third-meeting-title').text(thirdMeetingTitle);
-      $('.upcoming-meetings-section').find('.third-meeting-location').text(thirdMeetingLocation);
-  
-
 
 
     }, function(errorReason) {
