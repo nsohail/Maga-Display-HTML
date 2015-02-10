@@ -295,10 +295,6 @@ p {
 
 
 .maga-logo {
-	background-image: url('images/maga-logo.png');
-	background-repeat: no-repeat;
-	background-position: 100% 0%;
-	background-size: 30px;
 	height: 44px;
 	padding-top: 6px;
 }
