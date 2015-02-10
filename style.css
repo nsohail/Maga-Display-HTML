@@ -27,6 +27,7 @@ body {
 	height: 850px;
 	width: 1300px;
 	float: left;
+	background-repeat: no-repeat;
 }
 
 #slide2 {
