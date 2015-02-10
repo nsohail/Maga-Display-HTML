@@ -78,7 +78,7 @@ function makeApiCall() {
 
 
       //formatting info
-      for (var x in nextMeetingTimeStart && nextMeetingTimeEnd && secondMeetingTimeStart && secondMeetingTimeEnd {
+      for (var x in nextMeetingTimeStart && nextMeetingTimeEnd && secondMeetingTimeStart && secondMeetingTimeEnd) {
         var nextMeetingStart = nextMeetingTimeStart[x];
         var nextMeetingEnd = nextMeetingTimeEnd[x];
 
