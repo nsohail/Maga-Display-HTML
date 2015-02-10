@@ -39,13 +39,13 @@ body {
 	background-image: url(images/2015-placemat-back.jpg);
 }
 
-#slide3 {
+#slide4 {
 	background-image: url(images/group-pic.png);
 }
 
 .wrapper {
 	height: 850px;
-	width: 4200px;
+	width: 5200px;
 }
 
 p {
