@@ -4,7 +4,7 @@ $(document).ready(function(e) {
     var index = 0;
     var count = $('.wrapper').children().length; // set this value dynamically
 
-    //var interval = setInterval(next, 1*60*1000); // create the interval
+    var interval = setInterval(next, 1*60*1000); // create the interval
 
     // move to next slide
     function next() {
