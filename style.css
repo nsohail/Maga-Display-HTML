@@ -142,6 +142,10 @@ p {
 	color: #002545;
 }
 
+.ceo-box > .corner-highlight {
+	color: white;
+}
+
 .offsite {
 	background-image: url('images/offsite-events.png');
 }
@@ -198,13 +202,13 @@ p {
 
 
 .ceo-highlight {
-	padding: 5px 16px;
+	padding: 5px 28px;
 	font-weight: 400;
 	font-size: 16px;
 }
 
 .ceo-story {
-	padding: 0px 16px;
+	padding: 0px 28px;
 	font-weight: 100;
 	font-size: 14px;
 	line-height: 18px;
