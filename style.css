@@ -43,9 +43,13 @@ body {
 	background-image: url(images/group-pic.png);
 }
 
+#slide5 {
+	background-image: url(images/welcome-sign.png);
+}
+
 .wrapper {
 	height: 850px;
-	width: 5200px;
+	width: 6500px;
 }
 
 p {
@@ -366,9 +370,9 @@ p {
 #authorize-button, #authorize-button-logout {
 	background: rgba(33, 121, 145, 0.37);
 	border: 1px solid rgb(31, 115, 143);
-	padding: 5px;
+	padding: 0;
 	color: white;
-	font-size: 15px;
+	font-size: 10px;
 	font-family: flexo, sans-serif;
 	width: 70px;
 	font-weight: 100;
