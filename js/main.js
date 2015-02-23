@@ -67,9 +67,9 @@ function formatDate(){
 	var displayWholeDate = (displayDay + ', ' + displayMonth + ' ' + displayDate);
 	$('.row1').find($('.current-day')).text(displayWholeDate);
 
-	// window.setTimeout(function(){
-	// 	formatDate();
-	// }, 1*60*1000);
+	window.setTimeout(function(){
+		formatDate();
+	}, 1*60*1000);
 }
 
 
