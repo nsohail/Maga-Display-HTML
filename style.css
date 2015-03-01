@@ -59,7 +59,7 @@ p {
 }
 
 .row {
-	width: 30.3%;
+	width: 32%;
 	height: 100%;
 	float: left;
 	margin-right: 2%;
@@ -79,9 +79,20 @@ p {
 .row3 {
 	background: rgba(8, 48, 78, 0.95);
 	margin-right: 0;
+	height: 400px;
+	width: 66%;
+}
+
+.row3 > section > .announcements {
+	padding: 40px 20px;
 }
 
 
+.row2 {
+	width: 66%;
+	height: auto;
+	margin-right: 0;
+}
 
 
 .metric {
@@ -137,8 +148,16 @@ p {
 }
 
 .maga-box, .client-box {
-	background: rgba(67, 110, 140, 0.95);
-	height: 49.1%;
+	background: rgba(8, 48, 78, 0.95);
+	height: 435px;
+	float: left;
+	width: 48.5%;
+	margin-right: 3%;
+	margin-bottom: 15px;
+}
+
+.maga-box {
+	margin-right: 0;
 }
 
 .time-box {
@@ -284,8 +303,6 @@ p {
 
 .announcements {
 	padding: 14px;
-	font-family: flexo-regular, sans-serif;
-	font-weight: 100;
 }
 
 .announcement > .event-highlight-date {
