@@ -19,6 +19,7 @@ function checkAuth() {
 
 function handleAuthResult(authResult) {
   var authorizeButton = document.getElementById('authorize-button');
+  console.log(authResult);
   if (authResult && !authResult.error) {    //if you are authorized with no errors, make the call
     console.log("You are authorized");
     $('#authorize-button-logout').show();
