@@ -1,11 +1,11 @@
 @font-face {
     font-family: flexo-medium;
-    src: url(Fonts/Flexo-Medium.otf);
+    src: url(fonts/Flexo-Medium.otf);
 }
 
 @font-face {
     font-family: flexo-regular;
-    src: url(Fonts/Flexo-Regular.otf);
+    src: url(fonts/Flexo-Regular.otf);
 }
 
 body {
