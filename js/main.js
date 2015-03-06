@@ -97,12 +97,12 @@ function gotLocation(pos){
 function initialize(){
 	if(!currentLocation){
 		loadWeather("Washington, DC");
-		console.log("Loaded DC weather");
+		//console.log("Loaded DC weather");
 	}
 
 	else{
 		loadWeather(currentLocation);
-		console.log("Loaded current weather");
+		//console.log("Loaded current weather");
 	}
 }
 
@@ -112,7 +112,7 @@ function loadWeather(location){
 		woeid: '',
 		unit: 'f',
 		success: function(weather) {
-			console.log(weather);
+			//console.log(weather);
 			var html = weather.temp+'&deg;'+weather.units.temp;
 			$(".current-weather").html(html);
 		},
