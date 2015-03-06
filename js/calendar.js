@@ -111,7 +111,7 @@ function makeApiCall() {
     }, function(errorReason) {
         //location.reload();
         console.log('There was a HUGE Error: ' + errorReason.result.error.message);
-        //handleAuthResult();
+        handleAuthResult();
       });
 
   }); //client load ends here
