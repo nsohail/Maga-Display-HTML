@@ -1,13 +1,3 @@
-@font-face {
-    font-family: flexo-medium;
-    src: url(fonts/Flexo-Medium.otf);
-}
-
-@font-face {
-    font-family: flexo-regular;
-    src: url(fonts/Flexo-Regular.otf);
-}
-
 body {
 	background-image: url('images/google-image.jpg');
 	background-repeat: no-repeat;
