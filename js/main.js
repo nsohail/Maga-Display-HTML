@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
-	getLocation();
+	getWeatherLocation();
 	formatTime();
 	formatDate();
+
 });
 
 var currentLocation;
@@ -77,7 +78,7 @@ function formatDate(){
 
 //weather area
 
-function getLocation(){
+function getWeatherLocation(){
 	if(navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(gotLocation,initialize);
 	}
