@@ -20,10 +20,12 @@ function checkAuth() {
 function handleAuthResult(authResult) {
   var authorizeButton = document.getElementById('authorize-button');
   if (authResult && !authResult.error) {    //if you are authorized with no errors, make the call
+    console.log("You are authorized");
     $('#authorize-button-logout').show();
     $('#authorize-button').hide();
     makeApiCall();
   } else {  //if you are not authorized...
+    console.log("You NOT authorized");
     $('#authorize-button').show();
     authorizeButton.onclick = handleAuthClick;
   }
