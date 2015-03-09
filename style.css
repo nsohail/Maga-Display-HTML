@@ -73,6 +73,10 @@ p {
 	width: 66%;
 }
 
+.row3 .chart {
+	margin-top: 38px;
+}
+
 .row2 > section > .announcements {
   padding: 14px 34px 14px 14px;
   font-family: 'Exo 2', sans-serif;
@@ -91,8 +95,8 @@ p {
 }
 
 .row2 .announcement-block > .wrap > .announcement-description {
-    padding-left: 55px;
-    color: rgb(92, 148, 187);
+    margin-left: 55px;
+    color: #94f2f3;
     border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
     padding-bottom: 6px;
     margin-bottom: 6px;
