@@ -114,15 +114,15 @@ p {
 }
 
 .event-highlight.update {
-  background-image: url(../images/update-icon.png);
+  background-image: url(images/update-icon.png);
 }
 
 .event-highlight.shoutout {
-  background-image: url(../images/shoutout-icon.png);
+  background-image: url(images/shoutout-icon.png);
 }
 
 .event-highlight.event {
-  background-image: url(../images/event-icon.png);
+  background-image: url(images/event-icon.png);
 }
 
 
