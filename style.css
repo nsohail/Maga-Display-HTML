@@ -73,8 +73,56 @@ p {
 	width: 66%;
 }
 
-.row3 > section > .announcements {
-	padding: 40px 20px;
+.row2 > section > .announcements {
+  padding: 14px 34px 14px 14px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 14px;
+}
+
+.row2 .announcement-block {
+  position: relative;
+  margin-bottom: 18px;
+  line-height: 24px;
+}
+
+.row2 .announcement-block > .wrap {
+    position: relative;
+    left: 0px;
+}
+
+.row2 .announcement-block > .wrap > .announcement-description {
+    padding-left: 55px;
+    color: rgb(92, 148, 187);
+    border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    line-height: 1;
+}
+
+.row2 .announcement-block > .wrap > .announcement {
+    padding-left: 55px;
+}
+
+.row2 .announcement-block > .event-highlight {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    background-size: contain;
+    float: left;
+}
+
+.event-highlight.update {
+  background-image: url(../images/update-icon.png);
+}
+
+.event-highlight.shoutout {
+  background-image: url(../images/shoutout-icon.png);
+}
+
+.event-highlight.event {
+  background-image: url(../images/event-icon.png);
 }
 
 
@@ -291,22 +339,9 @@ p {
 	font-family: flexo-regular, sans-serif;
 }
 
-.announcements {
-	padding: 14px;
-}
 
-.announcement > .event-highlight-date {
-	color: rgb(180, 180, 180);
-	border-bottom: 1px rgba(255, 255, 255, 0.06) solid;
-	padding-bottom: 6px;
-	margin-bottom: 6px;
-	line-height: 1;
-}
 
-.announcement {
-	margin-bottom: 30px;
-	line-height: 24px;
-}
+
 
 
 .meetings-section {
