@@ -119,7 +119,7 @@ function makeApiCall() {
   window.setTimeout (function(){
     console.log("this is the timeout");
     makeApiCall();
-  }, 1*60*1000); //5 minutes
+  }, 5*60*1000); //5 minutes
 
   
 }//makeApiCall ends here
