@@ -122,8 +122,8 @@ p {
 }
 
 .row2 .announcement-block > .event-highlight {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     left: 0;
     z-index: 5;
@@ -457,4 +457,3 @@ p {
 	cursor: pointer;
 	visibility: visible;
 }
-
