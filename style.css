@@ -21,10 +21,9 @@ body {
   	left: 50%;
   	-webkit-transform: translate(-50%,-50%);
   	-ms-transform: translate(-50%,-50%);
-  	transform: translate(-50%,-50%);
-  	
-  	
+  	transform: translate(-50%,-50%);	
 }
+
 
 .slide {
 	height: 850px;
@@ -52,7 +51,7 @@ body {
 
 .wrapper {
 	height: 850px;
-	width: 6500px;  /*6500 with welcome screen && 5300 without welcome screen */
+	width: 5300px;  /*6500 with welcome screen && 5300 without welcome screen */
 }
 
 p {
