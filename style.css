@@ -52,7 +52,7 @@ body {
 
 .wrapper {
 	height: 850px;
-	width: 5300px;  /*6500 with welcome screen && 5300 without welcome screen */
+	width: 6500px;  /*6500 with welcome screen && 5300 without welcome screen */
 }
 
 p {
