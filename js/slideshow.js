@@ -8,6 +8,7 @@ $(document).ready(function(e) {
 
     // move to next slide
     function next() {
+        console.log("slideshow activated");
         index = (index + 1) % count; //equals 1
         goto(index);
     }
