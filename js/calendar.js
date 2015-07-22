@@ -81,25 +81,23 @@ function makeApiCall() {
 
 
       //formatting info
-      for (var x in nextMeetingTimeStart && nextMeetingTimeEnd && secondMeetingTimeStart && secondMeetingTimeEnd) {
-        var nextMeetingStart = nextMeetingTimeStart[x];
-        var nextMeetingEnd = nextMeetingTimeEnd[x];
+      var nextMeetingStart = nextMeetingTimeStart.dateTime;
+      var nextMeetingEnd = nextMeetingTimeEnd.dateTime;
 
-        var secondMeetingStart = secondMeetingTimeStart[x];
-        var secondMeetingEnd = secondMeetingTimeEnd[x];
+      var secondMeetingStart = secondMeetingTimeStart.dateTime;
+      var secondMeetingEnd = secondMeetingTimeEnd.dateTime;
 
-        var nextMeetingStartFormat = new Date(nextMeetingStart).toString('hh:mm tt');
-        var nextMeetingEndFormat = new Date(nextMeetingEnd).toString('hh:mm tt');
+      var nextMeetingStartFormat = new Date(nextMeetingStart).toString('hh:mm tt');
+      var nextMeetingEndFormat = new Date(nextMeetingEnd).toString('hh:mm tt');
 
-        var secondMeetingStartFormat = new Date(secondMeetingStart).toString('hh:mm tt');
-        var secondMeetingEndFormat = new Date(secondMeetingEnd).toString('hh:mm tt');
+      var secondMeetingStartFormat = new Date(secondMeetingStart).toString('hh:mm tt');
+      var secondMeetingEndFormat = new Date(secondMeetingEnd).toString('hh:mm tt');
 
-        $('.next-meetings-section').find('.next-meeting-time-start').text(nextMeetingStartFormat+'-');
-        $('.next-meetings-section').find('.next-meeting-time-end').text(nextMeetingEndFormat);
+      $('.next-meetings-section').find('.next-meeting-time-start').text(nextMeetingStartFormat+'-');
+      $('.next-meetings-section').find('.next-meeting-time-end').text(nextMeetingEndFormat);
 
-        $('.upcoming-meetings-section').find('.second-meeting-time-start').text(secondMeetingStartFormat+'-');
-        $('.upcoming-meetings-section').find('.second-meeting-time-end').text(secondMeetingEndFormat);
-      }
+      $('.upcoming-meetings-section').find('.second-meeting-time-start').text(secondMeetingStartFormat+'-');
+      $('.upcoming-meetings-section').find('.second-meeting-time-end').text(secondMeetingEndFormat);
 
       $('.next-meetings-section').find('.next-meeting-title').text(nextMeetingTitle);
       $('.next-meetings-section').find('.next-meeting-location').text(nextMeetingLocation);
