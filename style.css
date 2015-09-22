@@ -43,18 +43,22 @@ body {
 
 #slide4 {
 	background-image: url(images/offsite2015/offsite-1.jpg);
+	background-size: 100%;
 }
 
 #slide5 {
 	background-image: url(images/offsite2015/offsite-2.jpg);
+	background-size: 100%;
 }
 
 #slide6 {
 	background-image: url(images/offsite2015/hh-1.jpg);
+	background-size: 100%;
 }
 
 #slide7 {
 	background-image: url(images/offsite2015/hh-2.jpg);
+	background-size: 100%;
 }
 
 .wrapper {
