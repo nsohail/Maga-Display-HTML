@@ -34,24 +34,32 @@ body {
 }
 
 #slide2 {
-	background-image: url(images/2015-placemat-front.png);
-}
-
-#slide3 {
-	background-image: url(images/2015-placemat-back.jpg);
-}
-
-#slide4 {
 	background-image: url(images/group-pic.png);
 }
 
+#slide3 {
+	background-image: url(images/2015-placemat-front.png);
+}
+
+#slide4 {
+	background-image: url(images/offsite2015/offsite-1.jpg);
+}
+
 #slide5 {
-	background-image: url(images/welcome-sign.png);
+	background-image: url(images/offsite2015/offsite-2.jpg);
+}
+
+#slide6 {
+	background-image: url(images/offsite2015/hh-1.jpg);
+}
+
+#slide7 {
+	background-image: url(images/offsite2015/hh-2.jpg);
 }
 
 .wrapper {
 	height: 850px;
-	width: 5300px;  /*6500 with welcome screen && 5300 without welcome screen */
+	width: 9600px;  /*10800 with welcome screen && 9600 without welcome screen */
 }
 
 p {
