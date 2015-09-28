@@ -34,11 +34,11 @@ body {
 }
 
 #slide2 {
-	background-image: url(images/group-pic.png);
+	background-image: url(images/2015-placemat-front.png);
 }
 
 #slide3 {
-	background-image: url(images/2015-placemat-front.png);
+	background-image: url(images/offsite2015/hh-2.jpg);
 }
 
 #slide4 {
@@ -56,14 +56,9 @@ body {
 	background-size: 100%;
 }
 
-#slide7 {
-	background-image: url(images/offsite2015/hh-2.jpg);
-	background-size: 100%;
-}
-
 .wrapper {
 	height: 850px;
-	width: 9600px;  /*10800 with welcome screen && 9600 without welcome screen */
+	width: 8400px;  /*9600 with welcome screen && 8400 without welcome screen */
 }
 
 p {
