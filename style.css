@@ -64,13 +64,13 @@ body {
 }
 
 #slide8 {
-	background-image: url(images/welcome-sign.jpg);
+	background-image: url(images/welcome-sign.png);
 	background-size: 100%;
 }
 
 .wrapper {
 	height: 850px;
-	width: 10800px;  /*10800 with welcome screen && 9600 without welcome screen */
+	width: 9600px;  /*10800 with welcome screen && 9600 without welcome screen */
 }
 
 p {
