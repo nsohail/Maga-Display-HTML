@@ -54,7 +54,7 @@ body {
 }
 
 #slide6 {
-	background-image: url(images/offsite2015/offsite.jpg);
+	background-image: url(images/offsite2/offsite.jpg);
 	background-size: 100%;
 }
 
@@ -70,7 +70,7 @@ body {
 
 .wrapper {
 	height: 850px;
-	width: 9600px;  /*10800 with welcome screen && 9600 without welcome screen */
+	width: 10800px;  /*10800 with welcome screen && 9600 without welcome screen */
 }
 
 p {
